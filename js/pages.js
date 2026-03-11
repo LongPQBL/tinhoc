@@ -1,3 +1,194 @@
+// ===== Comment Helpers =====
+function getRelativeTime(timestamp) {
+  const now = Date.now();
+  const diff = now - timestamp;
+  const seconds = Math.floor(diff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const months = Math.floor(days / 30);
+
+  if (seconds < 60) return 'vừa xong';
+  if (minutes < 60) return `${minutes} phút trước`;
+  if (hours < 24) return `${hours} giờ trước`;
+  if (days < 30) return `${days} ngày trước`;
+  return `${months} tháng trước`;
+}
+
+function getAvatarColor(name) {
+  const colors = ['#6366f1', '#ec4899', '#f97316', '#22c55e', '#3b82f6', '#a855f7', '#ef4444', '#14b8a6', '#eab308', '#8b5cf6'];
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return colors[Math.abs(hash) % colors.length];
+}
+
+function getComments(articleId) {
+  try {
+    return JSON.parse(localStorage.getItem(`hub_comments_${articleId}`)) || [];
+  } catch { return []; }
+}
+
+function saveComments(articleId, comments) {
+  localStorage.setItem(`hub_comments_${articleId}`, JSON.stringify(comments));
+}
+
+function saveComment(articleId, comment) {
+  const comments = getComments(articleId);
+  comments.push(comment);
+  saveComments(articleId, comments);
+}
+
+function getLikes() {
+  try { return JSON.parse(localStorage.getItem('hub_comment_likes')) || {}; } catch { return {}; }
+}
+
+function toggleLike(commentId) {
+  const likes = getLikes();
+  if (likes[commentId]) { delete likes[commentId]; } else { likes[commentId] = true; }
+  localStorage.setItem('hub_comment_likes', JSON.stringify(likes));
+  return !!likes[commentId];
+}
+
+function isLiked(commentId) {
+  return !!getLikes()[commentId];
+}
+
+function getCommentLikeCount(articleId, commentId) {
+  const comments = getComments(articleId);
+  const c = comments.find(x => x.id === commentId);
+  return c ? (c.likes || 0) : 0;
+}
+
+function updateCommentLikes(articleId, commentId, delta) {
+  const comments = getComments(articleId);
+  const c = comments.find(x => x.id === commentId);
+  if (c) {
+    c.likes = (c.likes || 0) + delta;
+    if (c.likes < 0) c.likes = 0;
+    saveComments(articleId, comments);
+  }
+  return c ? c.likes : 0;
+}
+
+function addReply(articleId, commentId, reply) {
+  const comments = getComments(articleId);
+  const c = comments.find(x => x.id === commentId);
+  if (c) {
+    if (!c.replies) c.replies = [];
+    c.replies.push(reply);
+    saveComments(articleId, comments);
+  }
+}
+
+function renderSingleReply(r) {
+  const color = getAvatarColor(r.name);
+  const initial = r.name.charAt(0).toUpperCase();
+  return `
+    <div class="comment-reply-item">
+      <div class="comment-avatar comment-avatar-sm" style="background: ${color};">${initial}</div>
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="font-bold text-sm" style="color: var(--text-primary);">${r.name}</span>
+          <span class="text-xs" style="color: var(--text-secondary);">${getRelativeTime(r.timestamp)}</span>
+        </div>
+        <p class="mt-1 text-sm" style="color: var(--text-primary); line-height: 1.6;">${r.text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>
+      </div>
+    </div>`;
+}
+
+function renderCommentList(articleId) {
+  const comments = getComments(articleId);
+  if (!comments.length) {
+    return `<p class="text-center py-8" style="color: var(--text-secondary);"><i class="fa-regular fa-comment-dots text-2xl mb-2 block"></i>Chưa có bình luận nào. Hãy là người đầu tiên!</p>`;
+  }
+  return comments.slice().sort((a, b) => b.timestamp - a.timestamp).map(c => {
+    const color = getAvatarColor(c.name);
+    const initial = c.name.charAt(0).toUpperCase();
+    const liked = isLiked(c.id);
+    const likeCount = c.likes || 0;
+    const replies = c.replies || [];
+    const repliesHTML = replies.map(r => renderSingleReply(r)).join('');
+    return `
+      <div class="comment-item" data-comment-id="${c.id}">
+        <div class="comment-avatar" style="background: ${color};">${initial}</div>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="font-bold text-sm" style="color: var(--text-primary);">${c.name}</span>
+            <span class="text-xs" style="color: var(--text-secondary);">${getRelativeTime(c.timestamp)}</span>
+          </div>
+          <p class="mt-1 text-sm" style="color: var(--text-primary); line-height: 1.6;">${c.text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</p>
+          <div class="comment-actions">
+            <button class="comment-like-btn ${liked ? 'liked' : ''}" data-comment-id="${c.id}">
+              <span class="like-icon">${liked ? '❤️' : '🤍'}</span>
+              <span class="like-count">${likeCount > 0 ? likeCount : ''}</span>
+            </button>
+            <button class="comment-reply-btn" data-comment-id="${c.id}">
+              <i class="fa-solid fa-reply"></i> Trả lời
+            </button>
+          </div>
+          <div class="reply-form-container" id="replyForm-${c.id}" style="display:none;">
+            <div class="reply-form">
+              <textarea class="reply-textarea" placeholder="Viết trả lời..." rows="2"></textarea>
+              <div class="reply-form-actions">
+                <button class="reply-cancel-btn" data-comment-id="${c.id}">Hủy</button>
+                <button class="reply-submit-btn" data-comment-id="${c.id}">Gửi</button>
+              </div>
+            </div>
+          </div>
+          ${replies.length ? `<div class="comment-replies">${repliesHTML}</div>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function buildCommentSectionHTML(articleId) {
+  const savedName = localStorage.getItem('hub_commenter_name');
+  const comments = getComments(articleId);
+
+  const nameBarHTML = savedName
+    ? `<div id="commentNameBar" class="flex items-center gap-2 flex-wrap text-sm" style="color: var(--text-secondary);">
+        Bình luận với tên: <strong style="color: var(--text-primary);">${savedName}</strong>
+        <a href="#" id="commentChangeName" class="text-indigo-500 hover:underline text-xs">Đổi tên</a>
+        <div id="commentNameEditWrap" class="hidden flex items-center gap-2 mt-1 w-full">
+          <input type="text" id="commentNameEditInput" class="comment-name-input flex-1" value="${savedName}" placeholder="Nhập tên mới...">
+          <button id="commentNameEditSave" class="px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg text-xs font-medium transition-colors">Lưu</button>
+        </div>
+      </div>`
+    : `<div id="commentNameBar" class="flex items-center gap-2 flex-wrap text-sm">
+        <input type="text" id="commentNameInput" class="comment-name-input" placeholder="Nhập tên của bạn...">
+        <button id="commentNameSave" class="px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg text-xs font-medium transition-colors">Lưu</button>
+      </div>`;
+
+  return `
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16" id="commentSection" data-article-id="${articleId}">
+      <div class="glass-card p-6 md:p-8">
+        <h2 class="text-xl font-bold font-heading mb-6" style="color: var(--text-primary);" id="commentHeader">
+          <i class="fa-solid fa-comments text-indigo-500 mr-2"></i>Bình luận (${comments.length})
+        </h2>
+
+        <!-- Name bar -->
+        ${nameBarHTML}
+
+        <!-- Comment form -->
+        <div class="mt-4">
+          <textarea id="commentTextarea" class="comment-textarea" placeholder="Viết bình luận của bạn..." rows="3"></textarea>
+          <div class="mt-3 flex justify-end">
+            <button id="commentSubmitBtn" class="comment-submit-btn">
+              <i class="fa-solid fa-paper-plane mr-2"></i>Gửi bình luận
+            </button>
+          </div>
+        </div>
+
+        <!-- Comment list -->
+        <div class="mt-8 border-t pt-6" style="border-color: var(--border-color);" id="commentList">
+          ${renderCommentList(articleId)}
+        </div>
+      </div>
+    </section>`;
+}
+
 // ===== Page Renderers for SPA =====
 
 // ===== Home Page =====
@@ -426,11 +617,169 @@ function renderArticlePage(id) {
         </div>
       </div>
     </main>
-    ${relatedHTML}`;
+    ${relatedHTML}
+    ${buildCommentSectionHTML(article.id)}`;
 }
 
 function initArticlePage() {
   initScrollAnimations();
+  initCommentSection();
+}
+
+function initCommentSection() {
+  const section = document.getElementById('commentSection');
+  if (!section) return;
+  const articleId = section.dataset.articleId;
+
+  // --- Name save (first time) ---
+  const nameInput = document.getElementById('commentNameInput');
+  const nameSaveBtn = document.getElementById('commentNameSave');
+  if (nameInput && nameSaveBtn) {
+    nameSaveBtn.addEventListener('click', () => {
+      const name = nameInput.value.trim();
+      if (!name) { showToast('Vui lòng nhập tên của bạn!', 'error'); return; }
+      localStorage.setItem('hub_commenter_name', name);
+      _refreshNameBar(articleId);
+      showToast('Đã lưu tên thành công!', 'success');
+    });
+  }
+
+  // --- Change name toggle ---
+  _attachChangeNameListeners(articleId);
+
+  // --- Submit comment ---
+  const submitBtn = document.getElementById('commentSubmitBtn');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', () => {
+      const savedName = localStorage.getItem('hub_commenter_name');
+      const textarea = document.getElementById('commentTextarea');
+      if (!savedName) { showToast('Vui lòng nhập và lưu tên trước khi bình luận!', 'error'); return; }
+      if (!textarea || !textarea.value.trim()) { showToast('Vui lòng nhập nội dung bình luận!', 'error'); return; }
+
+      const comment = {
+        id: Date.now(),
+        name: savedName,
+        text: textarea.value.trim(),
+        timestamp: Date.now(),
+        likes: 0,
+        replies: []
+      };
+      saveComment(articleId, comment);
+      textarea.value = '';
+
+      _refreshCommentList(articleId);
+      showToast('Bình luận đã được gửi!', 'success');
+    });
+  }
+
+  // Attach like/reply listeners
+  _attachCommentInteractions(articleId);
+}
+
+function _refreshCommentList(articleId) {
+  document.getElementById('commentList').innerHTML = renderCommentList(articleId);
+  const comments = getComments(articleId);
+  const totalCount = comments.reduce((sum, c) => sum + 1 + (c.replies ? c.replies.length : 0), 0);
+  document.getElementById('commentHeader').innerHTML = `<i class="fa-solid fa-comments text-indigo-500 mr-2"></i>Bình luận (${totalCount})`;
+  _attachCommentInteractions(articleId);
+}
+
+function _attachCommentInteractions(articleId) {
+  // Like buttons
+  document.querySelectorAll('.comment-like-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const commentId = parseInt(btn.dataset.commentId);
+      const wasLiked = isLiked(commentId);
+      toggleLike(commentId);
+      const newCount = updateCommentLikes(articleId, commentId, wasLiked ? -1 : 1);
+      const icon = btn.querySelector('.like-icon');
+      const count = btn.querySelector('.like-count');
+      icon.textContent = wasLiked ? '🤍' : '❤️';
+      count.textContent = newCount > 0 ? newCount : '';
+      btn.classList.toggle('liked', !wasLiked);
+      // Bounce animation
+      btn.classList.add('like-bounce');
+      setTimeout(() => btn.classList.remove('like-bounce'), 300);
+    });
+  });
+
+  // Reply toggle buttons
+  document.querySelectorAll('.comment-reply-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const commentId = btn.dataset.commentId;
+      const form = document.getElementById(`replyForm-${commentId}`);
+      if (form) {
+        const isHidden = form.style.display === 'none';
+        // Hide all other reply forms
+        document.querySelectorAll('.reply-form-container').forEach(f => f.style.display = 'none');
+        form.style.display = isHidden ? 'block' : 'none';
+        if (isHidden) form.querySelector('.reply-textarea').focus();
+      }
+    });
+  });
+
+  // Reply cancel buttons
+  document.querySelectorAll('.reply-cancel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const form = document.getElementById(`replyForm-${btn.dataset.commentId}`);
+      if (form) { form.style.display = 'none'; form.querySelector('.reply-textarea').value = ''; }
+    });
+  });
+
+  // Reply submit buttons
+  document.querySelectorAll('.reply-submit-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const commentId = parseInt(btn.dataset.commentId);
+      const savedName = localStorage.getItem('hub_commenter_name');
+      if (!savedName) { showToast('Vui lòng nhập và lưu tên trước!', 'error'); return; }
+      const form = document.getElementById(`replyForm-${commentId}`);
+      const textarea = form.querySelector('.reply-textarea');
+      if (!textarea.value.trim()) { showToast('Vui lòng nhập nội dung trả lời!', 'error'); return; }
+      const reply = { id: Date.now(), name: savedName, text: textarea.value.trim(), timestamp: Date.now() };
+      addReply(articleId, commentId, reply);
+      _refreshCommentList(articleId);
+      showToast('Đã gửi trả lời!', 'success');
+    });
+  });
+}
+
+function _refreshNameBar(articleId) {
+  const savedName = localStorage.getItem('hub_commenter_name');
+  const bar = document.getElementById('commentNameBar');
+  if (!bar) return;
+  if (savedName) {
+    bar.outerHTML = `<div id="commentNameBar" class="flex items-center gap-2 flex-wrap text-sm" style="color: var(--text-secondary);">
+      Bình luận với tên: <strong style="color: var(--text-primary);">${savedName}</strong>
+      <a href="#" id="commentChangeName" class="text-indigo-500 hover:underline text-xs">Đổi tên</a>
+      <div id="commentNameEditWrap" class="hidden flex items-center gap-2 mt-1 w-full">
+        <input type="text" id="commentNameEditInput" class="comment-name-input flex-1" value="${savedName}" placeholder="Nhập tên mới...">
+        <button id="commentNameEditSave" class="px-3 py-1.5 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg text-xs font-medium transition-colors">Lưu</button>
+      </div>
+    </div>`;
+    _attachChangeNameListeners(articleId);
+  }
+}
+
+function _attachChangeNameListeners(articleId) {
+  const changeLink = document.getElementById('commentChangeName');
+  if (changeLink) {
+    changeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const wrap = document.getElementById('commentNameEditWrap');
+      if (wrap) wrap.classList.toggle('hidden');
+    });
+  }
+  const editSave = document.getElementById('commentNameEditSave');
+  if (editSave) {
+    editSave.addEventListener('click', () => {
+      const input = document.getElementById('commentNameEditInput');
+      const name = input ? input.value.trim() : '';
+      if (!name) { showToast('Tên không được để trống!', 'error'); return; }
+      localStorage.setItem('hub_commenter_name', name);
+      _refreshNameBar(articleId);
+      showToast('Đã đổi tên thành công!', 'success');
+    });
+  }
 }
 
 
