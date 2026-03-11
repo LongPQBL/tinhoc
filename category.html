@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>Chuyên mục - THE HUB.</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -74,7 +75,7 @@
           <h3 class="font-bold font-heading text-lg mb-4" style="color: var(--text-primary);">
             <i class="fa-solid fa-tags text-purple-500 mr-2"></i>Tags
           </h3>
-          <div id="tagCloud" class="flex flex-wrap gap-2"></div>
+          <div id="tagCloud" class="flex flex-wrap gap-1.5 overflow-y-auto" style="max-height: 240px; scrollbar-width: thin;"></div>
         </div>
       </aside>
     </div>

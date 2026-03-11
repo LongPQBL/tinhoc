@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <title>THE HUB. - Trang tin tức & Blog hàng đầu Việt Nam</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,18 +32,13 @@
   <!-- Search Overlay -->
   <div id="searchOverlayRoot"></div>
 
-  <!-- Hero Section -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-    <div id="heroSection" class="grid grid-cols-1 lg:grid-cols-5 gap-6"></div>
-  </section>
-
   <!-- Horizontal Scrolling Carousel -->
   <section class="carousel-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between mb-8">
         <div>
-          <h2 class="text-2xl md:text-3xl font-bold font-heading text-white">Tin nổi bật</h2>
-          <p class="text-sm text-gray-400 mt-1">Những bài viết được đọc nhiều nhất</p>
+          <h2 class="text-2xl md:text-3xl font-bold font-heading" style="color: var(--text-primary);">Tin nổi bật</h2>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);">Những bài viết được đọc nhiều nhất</p>
         </div>
         <div class="flex items-center gap-3">
           <div id="carouselDots" class="hidden sm:flex items-center gap-2 mr-4"></div>
@@ -131,42 +127,6 @@
     document.getElementById('headerRoot').innerHTML = getHeaderHTML('home');
     document.getElementById('footerRoot').innerHTML = getFooterHTML();
     document.getElementById('searchOverlayRoot').innerHTML = getSearchOverlayHTML();
-
-    // ===== Hero =====
-    function renderHero() {
-      const featured = articles.filter(a => a.featured);
-      const main = featured[0];
-      const secondary = featured[1];
-      const catMain = getCategoryInfo(main.category);
-      const catSec = getCategoryInfo(secondary.category);
-
-      document.getElementById('heroSection').innerHTML = `
-        <a href="article.html?id=${main.id}" class="lg:col-span-3 relative rounded-2xl overflow-hidden group block" style="min-height: 400px;">
-          <img src="${main.image}" alt="${main.title}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-8">
-            <span class="cat-badge ${main.category}">${catMain.label}</span>
-            <h1 class="mt-3 text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white leading-tight">${main.title}</h1>
-            <p class="mt-3 text-gray-200 text-sm md:text-base max-w-2xl">${main.excerpt}</p>
-            <div class="mt-4 flex items-center gap-3 text-gray-300 text-sm">
-              <img src="${main.authorAvatar}" class="w-8 h-8 rounded-full" alt="${main.author}">
-              <span>${main.author}</span><span>·</span><span>${formatDate(main.date)}</span>
-            </div>
-          </div>
-        </a>
-        <a href="article.html?id=${secondary.id}" class="lg:col-span-2 relative rounded-2xl overflow-hidden group block" style="min-height: 300px;">
-          <img src="${secondary.image}" alt="${secondary.title}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6">
-            <span class="cat-badge ${secondary.category}">${catSec.label}</span>
-            <h2 class="mt-3 text-xl md:text-2xl font-bold font-heading text-white leading-tight">${secondary.title}</h2>
-            <p class="mt-2 text-gray-300 text-sm">${secondary.excerpt}</p>
-            <div class="mt-3 flex items-center gap-3 text-gray-300 text-sm">
-              <span>${secondary.author}</span><span>·</span><span>${formatDate(secondary.date)}</span>
-            </div>
-          </div>
-        </a>`;
-    }
 
     // ===== Category Tabs =====
     function renderCategoryTabs() {
@@ -286,16 +246,24 @@
       const stats = [
         { label: 'Tổng truy cập', value: totalVisits.toLocaleString(), icon: 'fa-eye', color: 'text-blue-500' },
         { label: 'Khách truy cập', value: Math.floor(totalVisits * 0.7).toLocaleString(), icon: 'fa-users', color: 'text-green-500' },
-        { label: 'Lượt xem trang', value: (totalVisits * 3).toLocaleString(), icon: 'fa-file', color: 'text-purple-500' },
+        { label: 'Lượt xem trang', value: (totalVisits * 3).toLocaleString(), icon: 'fa-file', color: 'text-purple-500', highlight: true },
         { label: 'Tỷ lệ thoát', value: (Math.random() * 20 + 30).toFixed(1) + '%', icon: 'fa-arrow-right-from-bracket', color: 'text-orange-500' }
       ];
 
-      document.getElementById('statsCards').innerHTML = stats.map(s => `
-        <div class="glass-card p-5 text-center">
+      document.getElementById('statsCards').innerHTML = stats.map(s => {
+        if (s.highlight) {
+          return `<div class="p-5 text-center rounded-2xl ring-2 ring-indigo-500 shadow-lg" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(168,85,247,0.1)); border: 1px solid rgba(99,102,241,0.3);">
+            <i class="fa-solid ${s.icon} text-2xl ${s.color}"></i>
+            <div class="text-3xl font-bold font-heading mt-2 text-indigo-500">${s.value}</div>
+            <div class="text-sm mt-1 font-semibold" style="color: var(--text-primary);">${s.label}</div>
+          </div>`;
+        }
+        return `<div class="glass-card p-5 text-center">
           <i class="fa-solid ${s.icon} text-2xl ${s.color}"></i>
           <div class="text-2xl font-bold font-heading mt-2" style="color: var(--text-primary);">${s.value}</div>
           <div class="text-sm mt-1" style="color: var(--text-secondary);">${s.label}</div>
-        </div>`).join('');
+        </div>`;
+      }).join('');
     }
 
     // ===== Task Board =====
@@ -393,7 +361,6 @@
     }
 
     // ===== Init Home Page =====
-    renderHero();
     renderCarousel();
     renderCategoryTabs();
     renderArticleGrid();

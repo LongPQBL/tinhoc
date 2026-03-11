@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: 'Phan Quang Bảo Long',
     role: 'Create domain',
-    avatar: 'https://ui-avatars.com/api/?name=Bao+Long&background=6366f1&color=fff&size=32',
+    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
     tasks: [
       { title: 'Domain setup', status: 'done' },
       { title: 'DNS config', status: 'done' },
@@ -23,7 +23,7 @@ const teamMembers = [
   {
     name: 'Trương Lê Bình Minh',
     role: 'Provide ideas',
-    avatar: 'https://ui-avatars.com/api/?name=Binh+Minh&background=22c55e&color=fff&size=32',
+    avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
     tasks: [
       { title: 'Content strategy', status: 'done' },
       { title: 'Feature proposals', status: 'done' },
@@ -33,7 +33,7 @@ const teamMembers = [
   {
     name: 'Hồ Đắc Anh Kiệt',
     role: 'Design web',
-    avatar: 'https://ui-avatars.com/api/?name=Anh+Kiet&background=a855f7&color=fff&size=32',
+    avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
     tasks: [
       { title: 'UI mockups', status: 'done' },
       { title: 'Color scheme', status: 'done' },
@@ -43,7 +43,7 @@ const teamMembers = [
   {
     name: 'Mai Hồng Nhật Minh',
     role: 'Code web',
-    avatar: 'https://ui-avatars.com/api/?name=Nhat+Minh&background=ec4899&color=fff&size=32',
+    avatar: 'https://randomuser.me/api/portraits/men/22.jpg',
     tasks: [
       { title: 'Frontend development', status: 'done' },
       { title: 'JS logic', status: 'done' },
