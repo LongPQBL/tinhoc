@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu - THE HUB.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { heading: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); }</style>
+</head>
+<body>
+  <div id="headerRoot"></div>
+  <div id="searchOverlayRoot"></div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden py-20">
+    <div class="absolute inset-0 newsletter-gradient opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold font-heading" style="color: var(--text-primary);">Về chúng tôi</h1>
+      <p class="mt-4 text-lg" style="color: var(--text-secondary);">Câu chuyện đằng sau THE HUB. - nơi kết nối thông tin và cộng đồng</p>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+      <div>
+        <h2 class="text-3xl font-bold font-heading" style="color: var(--text-primary);">Sứ mệnh của chúng tôi</h2>
+        <p class="mt-6 text-lg leading-relaxed" style="color: var(--text-secondary);">THE HUB. ra đời với mong muốn trở thành nền tảng thông tin đáng tin cậy cho cộng đồng Việt Nam. Chúng tôi tin rằng thông tin chất lượng có thể thay đổi cuộc sống.</p>
+        <p class="mt-4 leading-relaxed" style="color: var(--text-secondary);">Với đội ngũ biên tập viên giàu kinh nghiệm và đam mê, chúng tôi cam kết mang đến những bài viết sâu sắc, chính xác và đa chiều về mọi lĩnh vực từ công nghệ, kinh doanh đến khoa học và đời sống.</p>
+        <div class="flex gap-4 mt-8">
+          <a href="contact.html" class="px-6 py-3 bg-indigo-500 text-white rounded-full font-semibold hover:bg-indigo-600 transition-colors">Liên hệ</a>
+          <a href="category.html" class="px-6 py-3 rounded-full font-semibold border-2 border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white transition-colors">Đọc bài viết</a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team working" class="w-full h-80 object-cover" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16" style="background: var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center animate-on-scroll">
+        <div>
+          <div class="text-4xl font-bold font-heading text-indigo-500 counter-value" data-target="500">500+</div>
+          <p class="mt-2 font-medium" style="color: var(--text-secondary);">Bài viết</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold font-heading text-green-500 counter-value" data-target="50000">50K+</div>
+          <p class="mt-2 font-medium" style="color: var(--text-secondary);">Độc giả</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold font-heading text-purple-500 counter-value" data-target="3">3+</div>
+          <p class="mt-2 font-medium" style="color: var(--text-secondary);">Năm hoạt động</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold font-heading text-orange-500 counter-value" data-target="15">15+</div>
+          <p class="mt-2 font-medium" style="color: var(--text-secondary);">Thành viên</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-12 animate-on-scroll">
+      <h2 class="text-3xl font-bold font-heading" style="color: var(--text-primary);">Đội ngũ của chúng tôi</h2>
+      <p class="mt-3" style="color: var(--text-secondary);">Những con người đam mê đằng sau THE HUB.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 animate-on-scroll" id="teamGrid"></div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-12 animate-on-scroll">
+      <h2 class="text-3xl font-bold font-heading" style="color: var(--text-primary);">Hành trình phát triển</h2>
+      <p class="mt-3" style="color: var(--text-secondary);">Những cột mốc quan trọng của THE HUB.</p>
+    </div>
+    <div class="animate-on-scroll">
+      <div class="timeline-item">
+        <div class="glass-card p-5">
+          <span class="text-sm font-bold text-indigo-500">Tháng 1, 2024</span>
+          <h4 class="font-bold font-heading mt-1" style="color: var(--text-primary);">Thành lập THE HUB.</h4>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);">Ý tưởng ra đời từ nhóm sinh viên đam mê công nghệ và truyền thông.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="glass-card p-5">
+          <span class="text-sm font-bold text-indigo-500">Tháng 6, 2024</span>
+          <h4 class="font-bold font-heading mt-1" style="color: var(--text-primary);">Ra mắt phiên bản đầu tiên</h4>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);">Website chính thức được ra mắt với 50 bài viết đầu tiên.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="glass-card p-5">
+          <span class="text-sm font-bold text-indigo-500">Tháng 12, 2024</span>
+          <h4 class="font-bold font-heading mt-1" style="color: var(--text-primary);">10,000 độc giả</h4>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);">Đạt mốc 10,000 độc giả thường xuyên truy cập mỗi tháng.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="glass-card p-5">
+          <span class="text-sm font-bold text-indigo-500">Tháng 6, 2025</span>
+          <h4 class="font-bold font-heading mt-1" style="color: var(--text-primary);">Mở rộng chuyên mục</h4>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);">Thêm 3 chuyên mục mới: Kinh doanh, Giải trí và Đời sống.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="glass-card p-5">
+          <span class="text-sm font-bold text-indigo-500">Tháng 3, 2026</span>
+          <h4 class="font-bold font-heading mt-1" style="color: var(--text-primary);">50,000 độc giả</h4>
+          <p class="text-sm mt-1" style="color: var(--text-secondary);">Trở thành một trong những blog công nghệ hàng đầu Việt Nam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footerRoot"></div>
+
+  <script src="js/articles-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('headerRoot').innerHTML = getHeaderHTML('about');
+    document.getElementById('footerRoot').innerHTML = getFooterHTML();
+    document.getElementById('searchOverlayRoot').innerHTML = getSearchOverlayHTML();
+
+    // Render team
+    document.getElementById('teamGrid').innerHTML = teamMembers.map(member => `
+      <div class="glass-card p-6 text-center">
+        <img src="${member.avatar}" alt="${member.name}" class="w-24 h-24 rounded-full mx-auto ring-4 ring-indigo-500/20">
+        <h4 class="font-bold font-heading mt-4" style="color: var(--text-primary);">${member.name}</h4>
+        <p class="text-sm mt-1 text-indigo-500 font-medium">${member.role}</p>
+        <div class="flex justify-center gap-3 mt-4">
+          <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all" style="background: var(--border-color); color: var(--text-secondary);"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+          <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all" style="background: var(--border-color); color: var(--text-secondary);"><i class="fa-brands fa-twitter text-xs"></i></a>
+          <a href="#" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all" style="background: var(--border-color); color: var(--text-secondary);"><i class="fa-brands fa-github text-xs"></i></a>
+        </div>
+      </div>`).join('');
+  </script>
+</body>
+</html>

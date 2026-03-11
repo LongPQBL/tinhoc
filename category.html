@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuyên mục - THE HUB.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { heading: ['Space Grotesk', 'sans-serif'], body: ['Inter', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); }</style>
+</head>
+<body>
+  <div id="headerRoot"></div>
+  <div id="searchOverlayRoot"></div>
+
+  <!-- Category Hero -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
+    <div id="categoryHero"></div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="flex flex-col lg:flex-row gap-10">
+      <!-- Articles Column -->
+      <div class="flex-1">
+        <!-- Sort Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div class="flex items-center gap-4">
+            <button class="sort-btn active text-sm font-medium" data-sort="newest" style="color: var(--text-secondary);">Mới nhất</button>
+            <button class="sort-btn text-sm font-medium" data-sort="popular" style="color: var(--text-secondary);">Phổ biến</button>
+            <button class="sort-btn text-sm font-medium" data-sort="az" style="color: var(--text-secondary);">A-Z</button>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="view-btn active w-9 h-9 rounded-lg flex items-center justify-center transition-colors" data-view="grid" style="background: var(--accent); color: white;"><i class="fa-solid fa-grid-2"></i></button>
+            <button class="view-btn w-9 h-9 rounded-lg flex items-center justify-center transition-colors" data-view="list" style="background: var(--border-color); color: var(--text-secondary);"><i class="fa-solid fa-list"></i></button>
+          </div>
+        </div>
+
+        <!-- Articles -->
+        <div id="categoryArticles"></div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex items-center justify-center gap-2 mt-10"></div>
+      </div>
+
+      <!-- Sidebar (desktop) -->
+      <aside class="lg:w-80 space-y-8">
+        <!-- Popular Articles -->
+        <div class="glass-card p-6">
+          <h3 class="font-bold font-heading text-lg mb-4" style="color: var(--text-primary);">
+            <i class="fa-solid fa-fire text-orange-500 mr-2"></i>Bài viết phổ biến
+          </h3>
+          <div id="popularArticles" class="space-y-4"></div>
+        </div>
+
+        <!-- Category List -->
+        <div class="glass-card p-6">
+          <h3 class="font-bold font-heading text-lg mb-4" style="color: var(--text-primary);">
+            <i class="fa-solid fa-folder text-indigo-500 mr-2"></i>Chuyên mục
+          </h3>
+          <div id="categoryList" class="space-y-3"></div>
+        </div>
+
+        <!-- Tag Cloud -->
+        <div class="glass-card p-6">
+          <h3 class="font-bold font-heading text-lg mb-4" style="color: var(--text-primary);">
+            <i class="fa-solid fa-tags text-purple-500 mr-2"></i>Tags
+          </h3>
+          <div id="tagCloud" class="flex flex-wrap gap-2"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <div id="footerRoot"></div>
+
+  <script src="js/articles-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('headerRoot').innerHTML = getHeaderHTML('category');
+    document.getElementById('footerRoot').innerHTML = getFooterHTML();
+    document.getElementById('searchOverlayRoot').innerHTML = getSearchOverlayHTML();
+
+    // State
+    const params = new URLSearchParams(window.location.search);
+    let currentCat = params.get('cat') || null;
+    let currentSort = 'newest';
+    let currentView = 'grid';
+    let currentPage = 1;
+    const perPage = 6;
+
+    // Category Hero
+    function renderCategoryHero() {
+      if (currentCat) {
+        const catInfo = getCategoryInfo(currentCat);
+        if (!catInfo) { currentCat = null; renderCategoryHero(); return; }
+        const count = getArticlesByCategory(currentCat).length;
+        document.title = `${catInfo.label} - THE HUB.`;
+        document.getElementById('categoryHero').innerHTML = `
+          <div class="text-center py-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4" style="background: ${catInfo.color}20;">
+              <i class="fa-solid ${catInfo.icon} text-2xl" style="color: ${catInfo.color};"></i>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold font-heading" style="color: var(--text-primary);">${catInfo.label}</h1>
+            <p class="mt-2" style="color: var(--text-secondary);">${count} bài viết trong chuyên mục này</p>
+          </div>`;
+      } else {
+        document.getElementById('categoryHero').innerHTML = `
+          <div class="text-center py-8">
+            <h1 class="text-3xl md:text-4xl font-bold font-heading" style="color: var(--text-primary);">Tất cả chuyên mục</h1>
+            <p class="mt-2" style="color: var(--text-secondary);">${articles.length} bài viết</p>
+            <div class="flex flex-wrap justify-center gap-3 mt-6">
+              ${categories.map(c => `
+                <a href="category.html?cat=${c.id}" class="category-pill ${currentCat === c.id ? 'active' : ''}" data-cat="${c.id}">
+                  <i class="fa-solid ${c.icon}"></i> ${c.label}
+                </a>`).join('')}
+            </div>
+          </div>`;
+      }
+    }
+
+    // Get sorted & filtered articles
+    function getPageArticles() {
+      let filtered = currentCat ? getArticlesByCategory(currentCat) : [...articles];
+
+      if (currentSort === 'newest') {
+        filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+      } else if (currentSort === 'popular') {
+        filtered.sort((a, b) => b.views - a.views);
+      } else if (currentSort === 'az') {
+        filtered.sort((a, b) => a.title.localeCompare(b.title, 'vi'));
+      }
+      return filtered;
+    }
+
+    function renderArticles() {
+      const all = getPageArticles();
+      const totalPages = Math.ceil(all.length / perPage);
+      const paged = all.slice((currentPage - 1) * perPage, currentPage * perPage);
+
+      const container = document.getElementById('categoryArticles');
+      if (currentView === 'grid') {
+        container.className = 'grid grid-cols-1 md:grid-cols-2 gap-6';
+        container.innerHTML = paged.map(a => renderCard(a)).join('');
+      } else {
+        container.className = 'space-y-4';
+        container.innerHTML = paged.map(a => renderListItem(a)).join('');
+      }
+
+      // Pagination
+      const pag = document.getElementById('pagination');
+      if (totalPages <= 1) { pag.innerHTML = ''; return; }
+      let pagHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        pagHTML += `<button class="w-10 h-10 rounded-lg flex items-center justify-center font-semibold text-sm transition-colors ${i === currentPage ? 'text-white' : ''}" style="${i === currentPage ? 'background: var(--accent); color: white;' : 'background: var(--border-color); color: var(--text-secondary);'}" data-page="${i}">${i}</button>`;
+      }
+      pag.innerHTML = pagHTML;
+      pag.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentPage = parseInt(btn.dataset.page);
+          renderArticles();
+          window.scrollTo({ top: 300, behavior: 'smooth' });
+        });
+      });
+    }
+
+    // Sidebar
+    function renderSidebar() {
+      // Popular articles
+      const popular = [...articles].sort((a, b) => b.views - a.views).slice(0, 5);
+      document.getElementById('popularArticles').innerHTML = popular.map((a, i) => `
+        <a href="article.html?id=${a.id}" class="flex items-start gap-3 group">
+          <span class="text-2xl font-bold font-heading text-indigo-500/30">${String(i + 1).padStart(2, '0')}</span>
+          <div>
+            <h4 class="text-sm font-semibold leading-snug group-hover:text-indigo-500 transition-colors" style="color: var(--text-primary);">${a.title}</h4>
+            <p class="text-xs mt-1" style="color: var(--text-secondary);">${formatViews(a.views)} lượt xem</p>
+          </div>
+        </a>`).join('');
+
+      // Category list
+      document.getElementById('categoryList').innerHTML = categories.map(c => {
+        const count = getArticlesByCategory(c.id).length;
+        const isActive = c.id === currentCat;
+        return `<a href="category.html?cat=${c.id}" class="flex items-center justify-between p-2 rounded-lg transition-colors ${isActive ? 'bg-indigo-500/10' : 'hover:bg-black/5 dark:hover:bg-white/5'}">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid ${c.icon} text-sm" style="color: ${c.color};"></i>
+            <span class="text-sm font-medium" style="color: var(--text-primary);">${c.label}</span>
+          </div>
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background: var(--border-color); color: var(--text-secondary);">${count}</span>
+        </a>`;
+      }).join('');
+
+      // Tag cloud
+      const allTags = [...new Set(articles.flatMap(a => a.tags))];
+      document.getElementById('tagCloud').innerHTML = allTags.map(tag =>
+        `<span class="tag-item">${tag}</span>`
+      ).join('');
+    }
+
+    // Sort buttons
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.sort-btn').forEach(b => { b.classList.remove('active'); b.style.color = 'var(--text-secondary)'; });
+        btn.classList.add('active');
+        btn.style.color = 'var(--accent)';
+        currentSort = btn.dataset.sort;
+        currentPage = 1;
+        renderArticles();
+      });
+    });
+
+    // View toggle
+    document.querySelectorAll('.view-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.view-btn').forEach(b => { b.classList.remove('active'); b.style.background = 'var(--border-color)'; b.style.color = 'var(--text-secondary)'; });
+        btn.classList.add('active');
+        btn.style.background = 'var(--accent)';
+        btn.style.color = 'white';
+        currentView = btn.dataset.view;
+        renderArticles();
+      });
+    });
+
+    // Init
+    renderCategoryHero();
+    renderArticles();
+    renderSidebar();
+  </script>
+</body>
+</html>
