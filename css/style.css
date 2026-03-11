@@ -781,3 +781,31 @@
   color: white;
   border-color: transparent;
 }
+
+/* ===== SPA Page Transitions ===== */
+.page-wrapper {
+  position: relative;
+  min-height: 60vh;
+}
+
+.page-content {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Outgoing page: fade out + slide left */
+.page-exit {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* Incoming page starts hidden, slides from right */
+.page-enter {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* Incoming page animates to visible */
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+}

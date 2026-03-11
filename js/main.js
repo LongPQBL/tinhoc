@@ -69,7 +69,7 @@ function initScrollAnimations() {
 function renderCard(article) {
   const catInfo = getCategoryInfo(article.category);
   return `
-    <a href="article.html?id=${article.id}" class="article-card block overflow-hidden">
+    <a href="#/article?id=${article.id}" class="article-card block overflow-hidden">
       <div class="overflow-hidden">
         <img src="${article.image}" alt="${article.title}" loading="lazy" class="w-full h-48 object-cover">
       </div>
@@ -95,7 +95,7 @@ function renderCard(article) {
 function renderListItem(article) {
   const catInfo = getCategoryInfo(article.category);
   return `
-    <a href="article.html?id=${article.id}" class="article-list-item">
+    <a href="#/article?id=${article.id}" class="article-list-item">
       <img src="${article.image}" alt="${article.title}" loading="lazy">
       <div class="flex-1">
         <span class="cat-badge ${article.category}">${catInfo ? catInfo.label : ''}</span>
@@ -117,27 +117,27 @@ function renderListItem(article) {
 // ===== Header HTML =====
 function getHeaderHTML(activePage) {
   const navItems = [
-    { href: 'index.html', label: 'Trang chủ', id: 'home' },
-    { href: 'category.html', label: 'Chuyên mục', id: 'category' },
-    { href: 'about.html', label: 'Giới thiệu', id: 'about' },
-    { href: 'contact.html', label: 'Liên hệ', id: 'contact' }
+    { href: '#/', label: 'Trang chủ', id: 'home' },
+    { href: '#/category', label: 'Chuyên mục', id: 'category' },
+    { href: '#/about', label: 'Giới thiệu', id: 'about' },
+    { href: '#/contact', label: 'Liên hệ', id: 'contact' }
   ];
 
   const navLinks = navItems.map(item => {
     const isActive = item.id === activePage;
-    return `<a href="${item.href}" class="font-medium transition-colors ${isActive ? 'text-indigo-500 dark:text-indigo-400' : 'hover:text-indigo-500 dark:hover:text-indigo-400'}" style="color: ${isActive ? '' : 'var(--text-primary)'};">${item.label}</a>`;
+    return `<a href="${item.href}" data-nav="${item.id}" class="nav-link font-medium transition-colors ${isActive ? 'text-indigo-500 dark:text-indigo-400' : 'hover:text-indigo-500 dark:hover:text-indigo-400'}" style="color: ${isActive ? '' : 'var(--text-primary)'};">${item.label}</a>`;
   }).join('');
 
   const mobileLinks = navItems.map(item => {
     const isActive = item.id === activePage;
-    return `<a href="${item.href}" class="block py-2 font-medium ${isActive ? 'text-indigo-500' : ''}" style="color: ${isActive ? '' : 'var(--text-primary)'};">${item.label}</a>`;
+    return `<a href="${item.href}" data-nav="${item.id}" class="nav-link block py-2 font-medium ${isActive ? 'text-indigo-500' : ''}" style="color: ${isActive ? '' : 'var(--text-primary)'};">${item.label}</a>`;
   }).join('');
 
   return `
   <header class="header-glass sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <a href="index.html" class="text-2xl font-bold font-heading tracking-tight" style="color: var(--text-primary);">THE HUB<span class="text-indigo-500">.</span></a>
+        <a href="#/" class="text-2xl font-bold font-heading tracking-tight" style="color: var(--text-primary);">THE HUB<span class="text-indigo-500">.</span></a>
         <nav class="hidden md:flex items-center gap-8">${navLinks}</nav>
         <div class="flex items-center gap-3">
           <button id="searchBtn" class="p-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10 transition-colors" aria-label="Tìm kiếm">
@@ -156,10 +156,46 @@ function getHeaderHTML(activePage) {
   </header>`;
 }
 
+// ===== Update Active Nav Link =====
+function updateActiveNav(page) {
+  // Map category and article pages to the right nav highlight
+  let navId = page;
+  if (page === 'article') navId = ''; // no nav highlight for article page
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const linkId = link.getAttribute('data-nav');
+    const isActive = linkId === navId;
+
+    if (isActive) {
+      link.classList.add('text-indigo-500', 'dark:text-indigo-400');
+      link.classList.remove('hover:text-indigo-500', 'dark:hover:text-indigo-400');
+      link.style.color = '';
+    } else {
+      link.classList.remove('text-indigo-500', 'dark:text-indigo-400');
+      link.classList.add('hover:text-indigo-500', 'dark:hover:text-indigo-400');
+      link.style.color = 'var(--text-primary)';
+    }
+  });
+
+  // Close mobile menu on navigation
+  const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  if (mobileMenu && mobileMenu.classList.contains('open')) {
+    mobileMenu.classList.remove('open');
+    if (hamburger) {
+      const icon = hamburger.querySelector('i');
+      if (icon) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+  }
+}
+
 // ===== Footer HTML =====
 function getFooterHTML() {
   const catLinks = categories.map(c =>
-    `<a href="category.html?cat=${c.id}" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">${c.label}</a>`
+    `<a href="#/category?cat=${c.id}" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">${c.label}</a>`
   ).join('');
 
   return `
@@ -168,7 +204,7 @@ function getFooterHTML() {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Brand -->
         <div>
-          <a href="index.html" class="text-2xl font-bold font-heading" style="color: var(--text-primary);">THE HUB<span class="text-indigo-500">.</span></a>
+          <a href="#/" class="text-2xl font-bold font-heading" style="color: var(--text-primary);">THE HUB<span class="text-indigo-500">.</span></a>
           <p class="mt-4 text-sm leading-relaxed" style="color: var(--text-secondary);">Trang tin tức và blog hàng đầu Việt Nam, mang đến những thông tin chất lượng và góc nhìn đa chiều.</p>
           <div class="flex gap-4 mt-6">
             <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-indigo-500 hover:text-white transition-all" style="background: var(--border-color); color: var(--text-secondary);"><i class="fa-brands fa-facebook-f"></i></a>
@@ -181,9 +217,9 @@ function getFooterHTML() {
         <div>
           <h4 class="font-bold font-heading mb-4" style="color: var(--text-primary);">Liên kết nhanh</h4>
           <div class="space-y-3">
-            <a href="index.html" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Trang chủ</a>
-            <a href="about.html" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Giới thiệu</a>
-            <a href="contact.html" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Liên hệ</a>
+            <a href="#/" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Trang chủ</a>
+            <a href="#/about" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Giới thiệu</a>
+            <a href="#/contact" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Liên hệ</a>
             <a href="#" class="block hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors" style="color: var(--text-secondary);">Chính sách bảo mật</a>
           </div>
         </div>
@@ -251,7 +287,6 @@ function showToast(message, type = 'success') {
 document.addEventListener('DOMContentLoaded', () => {
   initDarkMode();
   initMobileNav();
-  initScrollAnimations();
 
   // Search overlay events
   const searchBtn = document.getElementById('searchBtn');
@@ -334,7 +369,7 @@ function renderSearchResults(results) {
   container.innerHTML = results.slice(0, 8).map(article => {
     const catInfo = getCategoryInfo(article.category);
     return `
-      <a href="article.html?id=${article.id}" class="search-result-item">
+      <a href="#/article?id=${article.id}" class="search-result-item" onclick="document.getElementById('searchOverlay').classList.remove('active');">
         <div class="flex items-center gap-3">
           <img src="${article.image}" alt="" class="w-12 h-12 rounded-lg object-cover">
           <div class="flex-1 min-w-0">
