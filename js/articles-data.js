@@ -1236,6 +1236,602 @@ const articles = [
     <p>Cuộc chiến kết thúc ngày 20/8/1988 với Nghị quyết ngừng bắn 598 của Hội đồng Bảo an LHQ. Ayatollah Khomeini chấp nhận ngừng bắn, ví von nó như "uống thuốc độc". Không bên nào giành được lợi thế lãnh thổ, nhưng cả triệu người đã thiệt mạng và hai nền kinh tế kiệt quệ: Iraq nợ 80 tỷ USD, Iran mất hàng trăm tỷ USD doanh thu dầu mỏ.</p>
     <h2>Di sản và hệ quả</h2>
     <p>Cuộc chiến để lại hậu quả sâu rộng: hàng triệu cựu binh bị tổn thương thể chất và tinh thần, vùng đất nhiễm chất độc hóa học, và hai xã hội mang đầy vết thương. Quan trọng hơn, cuộc chiến trực tiếp dẫn đến việc Iraq xâm lược Kuwait năm 1990 — Saddam cần tiền trả nợ chiến tranh — châm ngòi cho Chiến tranh Vùng Vịnh và chuỗi sự kiện định hình Trung Đông cho đến ngày nay.</p>`
+  },
+  {
+    id: 33,
+    title: 'Máy tính lượng tử đạt 10.000 qubit: Kỷ nguyên mới của điện toán',
+    excerpt: 'Bước đột phá trong công nghệ máy tính lượng tử hứa hẹn giải quyết những bài toán mà siêu máy tính truyền thống cần hàng triệu năm.',
+    category: 'cong-nghe',
+    author: 'Phạm Đức Hải',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Duc+Hai&background=3b82f6&color=fff&size=32',
+    date: '2026-03-08',
+    readTime: 10,
+    image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80',
+    featured: false,
+    views: 18742,
+    tags: ['Máy tính lượng tử', 'Công nghệ', 'Đột phá'],
+    content: `<p>Tháng 3 năm 2026, IBM và Google đồng thời công bố đã vượt qua mốc 10.000 qubit ổn định trong các hệ thống máy tính lượng tử thế hệ mới. Đây là cột mốc mà giới chuyên gia đánh giá sẽ mở ra kỷ nguyên "ưu thế lượng tử thực sự" — khi máy tính lượng tử có thể giải quyết các bài toán thực tế mà máy tính cổ điển không thể.</p>
+    <h2>Tại sao 10.000 qubit là con số đặc biệt?</h2>
+    <p>Trong suốt thập kỷ qua, máy tính lượng tử đã phát triển từ vài chục qubit lên hàng trăm, rồi hàng nghìn qubit. Tuy nhiên, vấn đề lớn nhất không phải số lượng mà là chất lượng — các qubit cực kỳ nhạy cảm với nhiễu từ môi trường và dễ mất thông tin. Với 10.000 qubit có tỷ lệ lỗi dưới 0,01%, lần đầu tiên các nhà khoa học có thể thực hiện sửa lỗi lượng tử hiệu quả, biến máy tính lượng tử từ công cụ thí nghiệm thành nền tảng tính toán đáng tin cậy.</p>
+    <blockquote>Đây không chỉ là bước tiến về số lượng. Chúng tôi đã giải quyết được bài toán decoherence — kẻ thù lớn nhất của điện toán lượng tử — ở quy mô chưa từng có. — TS. Sarah Chen, Giám đốc nghiên cứu lượng tử IBM</blockquote>
+    <h2>Ứng dụng thực tiễn đầu tiên</h2>
+    <p>Ngay sau công bố, các tập đoàn dược phẩm lớn như Pfizer và Roche đã ký hợp đồng sử dụng hệ thống mới để mô phỏng phân tử phức tạp — việc mà trước đây cần hàng triệu năm tính toán trên siêu máy tính truyền thống. Điều này có thể rút ngắn thời gian phát triển thuốc mới từ 10-15 năm xuống còn 2-3 năm.</p>
+    <h2>Tác động đến an ninh mạng</h2>
+    <p>Một mặt đáng lo ngại là khả năng phá mã hóa. Các chuyên gia cảnh báo rằng hệ thống mã hóa RSA-2048 hiện tại có thể bị bẻ khóa trong vài giờ với máy tính lượng tử 10.000 qubit. Điều này thúc đẩy cuộc chạy đua chuyển sang mã hóa hậu lượng tử (post-quantum cryptography) trên toàn cầu.</p>
+    <ul>
+      <li>NIST đã hoàn thiện bộ tiêu chuẩn mã hóa hậu lượng tử từ 2024</li>
+      <li>Các ngân hàng lớn đang triển khai nâng cấp hệ thống bảo mật</li>
+      <li>Chính phủ nhiều nước ban hành quy định chuyển đổi bắt buộc trước 2028</li>
+    </ul>
+    <h2>Việt Nam trong cuộc đua lượng tử</h2>
+    <p>Việt Nam đã thành lập Trung tâm Nghiên cứu Điện toán Lượng tử Quốc gia tại Khu Công nghệ Cao TP.HCM, với ngân sách 500 tỷ đồng cho giai đoạn 2025-2030. Dù còn khoảng cách xa so với các cường quốc công nghệ, các nhà khoa học Việt Nam đang tập trung vào phát triển thuật toán lượng tử và ứng dụng trong lĩnh vực tài chính, logistics — những ngành mà Việt Nam có lợi thế.</p>`
+  },
+  {
+    id: 34,
+    title: 'An ninh mạng 2026: Cuộc chiến không hồi kết với AI deepfake',
+    excerpt: 'Khi deepfake ngày càng tinh vi, các chuyên gia an ninh mạng đang phải tìm những giải pháp sáng tạo để bảo vệ người dùng.',
+    category: 'cong-nghe',
+    author: 'Võ Thanh Tùng',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Thanh+Tung&background=3b82f6&color=fff&size=32',
+    date: '2026-02-25',
+    readTime: 8,
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80',
+    featured: false,
+    views: 14320,
+    tags: ['An ninh mạng', 'Deepfake', 'AI'],
+    content: `<p>Năm 2026 chứng kiến sự bùng nổ chưa từng có của các cuộc tấn công mạng sử dụng deepfake. Từ video giả mạo CEO của các tập đoàn lớn để thao túng cổ phiếu, đến cuộc gọi giả giọng nói để lừa đảo chuyển tiền — deepfake đã trở thành vũ khí nguy hiểm nhất trong kho công cụ của tội phạm mạng.</p>
+    <h2>Mức độ tinh vi đáng báo động</h2>
+    <p>Theo báo cáo của Interpol, thiệt hại do deepfake gây ra trên toàn cầu đã vượt 25 tỷ USD trong năm 2025, tăng 300% so với năm trước. Đặc biệt, công nghệ deepfake thời gian thực cho phép kẻ tấn công giả mạo khuôn mặt và giọng nói trong các cuộc gọi video trực tiếp, khiến nạn nhân gần như không thể phân biệt.</p>
+    <blockquote>Chúng ta đang bước vào thời đại mà "seeing is no longer believing" — nhìn thấy không còn đồng nghĩa với tin tưởng. Mỗi cuộc gọi video, mỗi đoạn ghi âm đều cần được xác thực. — Chuyên gia Nguyễn Minh Đức, VNISA</blockquote>
+    <h2>Giải pháp từ blockchain và watermark kỹ thuật số</h2>
+    <p>Các công ty công nghệ hàng đầu đang triển khai hệ thống xác thực nội dung dựa trên blockchain. Mỗi bức ảnh, video gốc sẽ được gắn chữ ký số không thể giả mạo ngay từ lúc tạo ra. Adobe, Google và Microsoft đã hợp tác trong dự án Content Authenticity Initiative, tích hợp watermark vô hình vào mọi nội dung được tạo bởi AI.</p>
+    <h2>Việt Nam ứng phó như thế nào?</h2>
+    <p>Bộ Công an Việt Nam đã thành lập đơn vị chuyên trách chống deepfake với hơn 200 chuyên gia. Hệ thống phát hiện deepfake "made in Vietnam" do Viettel Cyber Security phát triển đạt độ chính xác 96,5% và đang được triển khai tại các ngân hàng lớn để xác thực khách hàng qua video call.</p>
+    <ul>
+      <li>Triển khai eKYC thế hệ mới với khả năng phát hiện deepfake thời gian thực</li>
+      <li>Bắt buộc xác thực đa yếu tố cho mọi giao dịch trên 10 triệu đồng</li>
+      <li>Chương trình giáo dục cộng đồng về nhận biết deepfake</li>
+      <li>Luật mới quy định hình sự hóa việc tạo và phát tán deepfake gây hại</li>
+    </ul>
+    <h2>Cuộc chạy đua vũ trang AI</h2>
+    <p>Điều đáng chú ý là cả hai phía — tấn công và phòng thủ — đều sử dụng AI. Khi AI tạo deepfake ngày càng giỏi, AI phát hiện deepfake cũng phải tiến hóa tương ứng. Đây là cuộc chạy đua vũ trang công nghệ mà các chuyên gia dự báo sẽ định hình ngành an ninh mạng trong thập kỷ tới.</p>`
+  },
+  {
+    id: 35,
+    title: 'Thành phố thông minh: Singapore và bài học cho Việt Nam',
+    excerpt: 'Mô hình Smart Nation của Singapore đang truyền cảm hứng cho các đô thị Việt Nam trong hành trình chuyển đổi số.',
+    category: 'cong-nghe',
+    author: 'Đặng Quốc Vinh',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Quoc+Vinh&background=3b82f6&color=fff&size=32',
+    date: '2026-02-10',
+    readTime: 9,
+    image: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80',
+    featured: false,
+    views: 11580,
+    tags: ['Smart City', 'Đô thị', 'Chuyển đổi số'],
+    content: `<p>Khi dân số đô thị toàn cầu dự kiến đạt 68% vào năm 2050, khái niệm "thành phố thông minh" không còn là tầm nhìn xa vời mà đã trở thành nhu cầu cấp bách. Singapore, với chương trình Smart Nation khởi động từ 2014, đang là hình mẫu mà nhiều thành phố châu Á, bao gồm TP.HCM và Hà Nội, đang học hỏi.</p>
+    <h2>Singapore: Quốc gia thông minh hàng đầu thế giới</h2>
+    <p>Từ hệ thống giao thông tự động điều chỉnh theo lưu lượng thời gian thực, đến mạng lưới cảm biến giám sát chất lượng không khí và nước, Singapore đã xây dựng một hệ sinh thái số toàn diện. Năm 2026, 95% dịch vụ công của Singapore đã được số hóa hoàn toàn, tiết kiệm cho chính phủ và người dân hơn 3 tỷ SGD mỗi năm.</p>
+    <blockquote>Thành phố thông minh không phải về công nghệ — mà về con người. Công nghệ chỉ là công cụ để nâng cao chất lượng cuộc sống cho mọi người dân. — Bộ trưởng Truyền thông Singapore</blockquote>
+    <h2>TP.HCM: Những bước đi đầu tiên</h2>
+    <p>TP.HCM đã triển khai Trung tâm Điều hành Đô thị Thông minh (IOC) từ 2023, tích hợp dữ liệu từ hơn 10.000 camera giám sát, hệ thống đèn giao thông thông minh và các cảm biến ngập nước. Kết quả ban đầu khá tích cực: thời gian phản ứng với sự cố giao thông giảm 40%, cảnh báo ngập sớm giúp người dân chủ động di chuyển.</p>
+    <h2>Thách thức của Việt Nam</h2>
+    <p>Dù có nhiều tiến bộ, Việt Nam vẫn đối mặt với những thách thức lớn trong xây dựng thành phố thông minh:</p>
+    <ul>
+      <li>Hạ tầng dữ liệu phân tán, thiếu tiêu chuẩn kết nối chung giữa các sở ban ngành</li>
+      <li>Nguồn nhân lực công nghệ cao còn thiếu hụt, đặc biệt ở cấp quản lý</li>
+      <li>Vấn đề bảo mật dữ liệu cá nhân chưa có khung pháp lý hoàn chỉnh</li>
+      <li>Ngân sách đầu tư hạn chế so với quy mô đô thị hóa nhanh</li>
+    </ul>
+    <h2>Lộ trình đến 2030</h2>
+    <p>Theo Đề án Chuyển đổi số Quốc gia, Việt Nam đặt mục tiêu có ít nhất 3 thành phố đạt tiêu chuẩn thông minh cấp quốc tế vào năm 2030. Các thành phố ưu tiên gồm TP.HCM, Hà Nội và Đà Nẵng. Tổng ngân sách dự kiến lên đến 50.000 tỷ đồng, trong đó kêu gọi 60% từ khu vực tư nhân thông qua mô hình đối tác công-tư (PPP).</p>`
+  },
+  {
+    id: 36,
+    title: 'Robot phẫu thuật thế hệ mới: Độ chính xác đến từng micromet',
+    excerpt: 'Thế hệ robot phẫu thuật mới nhất có thể thực hiện các ca mổ phức tạp với độ chính xác vượt xa tay người.',
+    category: 'cong-nghe',
+    author: 'Lý Thanh Hà',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Thanh+Ha&background=3b82f6&color=fff&size=32',
+    date: '2026-01-20',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80',
+    featured: false,
+    views: 9870,
+    tags: ['Robot', 'Y tế', 'Phẫu thuật'],
+    content: `<p>Bệnh viện Johns Hopkins vừa công bố kết quả thử nghiệm lâm sàng của hệ thống robot phẫu thuật thế hệ 5 — MAESTRO. Với cánh tay robot có 12 bậc tự do và hệ thống thị giác 3D độ phân giải 16K, MAESTRO có thể thực hiện các ca phẫu thuật thần kinh và tim mạch phức tạp nhất với độ chính xác đến 5 micromet — nhỏ hơn đường kính một tế bào hồng cầu.</p>
+    <h2>Vượt xa giới hạn của tay người</h2>
+    <p>Tay người dù được đào tạo bao lâu vẫn có độ rung tự nhiên khoảng 100-200 micromet. MAESTRO loại bỏ hoàn toàn yếu tố này, đồng thời có thể duy trì mức chính xác tuyệt đối trong suốt ca phẫu thuật kéo dài 12 giờ mà không mệt mỏi. AI tích hợp còn có thể cảnh báo bác sĩ khi phát hiện mạch máu hoặc dây thần kinh quan trọng trong vùng phẫu thuật.</p>
+    <blockquote>MAESTRO không thay thế bác sĩ phẫu thuật — nó biến mỗi bác sĩ thành siêu bác sĩ. Những ca mổ mà trước đây chỉ vài chuyên gia trên thế giới dám thực hiện, nay có thể được triển khai rộng rãi. — GS. Robert Kim, Johns Hopkins</blockquote>
+    <h2>Kết quả thử nghiệm ấn tượng</h2>
+    <p>Trong 500 ca phẫu thuật thử nghiệm, MAESTRO đạt tỷ lệ thành công 99,2%, thời gian phẫu thuật giảm 35% và thời gian hồi phục của bệnh nhân giảm 50% so với phẫu thuật truyền thống. Đặc biệt, tỷ lệ biến chứng sau mổ chỉ 0,4% — thấp hơn 5 lần so với mức trung bình ngành.</p>
+    <h2>Chi phí và khả năng tiếp cận</h2>
+    <p>Mỗi hệ thống MAESTRO có giá khoảng 3 triệu USD, nhưng các chuyên gia tính toán rằng nó giúp tiết kiệm 8-10 triệu USD mỗi năm cho bệnh viện nhờ giảm biến chứng, rút ngắn thời gian nằm viện và tăng số ca phẫu thuật có thể thực hiện. Hiện đã có 50 bệnh viện trên thế giới đặt hàng, trong đó có Bệnh viện Chợ Rẫy và Bệnh viện Việt Đức.</p>
+    <h2>Tương lai phẫu thuật từ xa</h2>
+    <p>Một tính năng đột phá khác là khả năng phẫu thuật từ xa qua mạng 5G. Bác sĩ tại New York có thể điều khiển MAESTRO đặt tại một bệnh viện ở Việt Nam với độ trễ chỉ 5 mili-giây — đủ nhanh để thực hiện an toàn mọi loại phẫu thuật. Điều này hứa hẹn xóa bỏ khoảng cách y tế giữa thành thị và nông thôn.</p>`
+  },
+  {
+    id: 37,
+    title: 'Quy định tiền mã hóa toàn cầu: Bước ngoặt cho thị trường crypto',
+    excerpt: 'G20 thống nhất khung pháp lý chung cho tiền mã hóa, mở đường cho sự phát triển bền vững của tài sản số.',
+    category: 'kinh-doanh',
+    author: 'Hoàng Minh Tuấn',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Minh+Tuan&background=22c55e&color=fff&size=32',
+    date: '2026-03-05',
+    readTime: 9,
+    image: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80',
+    featured: false,
+    views: 22150,
+    tags: ['Cryptocurrency', 'Tài chính', 'Quy định'],
+    content: `<p>Hội nghị thượng đỉnh G20 tại Brazil vào tháng 2/2026 đã đạt được thỏa thuận lịch sử: một khung pháp lý chung cho tiền mã hóa và tài sản số trên toàn cầu. Sau nhiều năm mỗi quốc gia "mò mẫm" theo cách riêng, lần đầu tiên thế giới có một bộ quy tắc thống nhất, mở đường cho sự phát triển bền vững và minh bạch của thị trường crypto trị giá hơn 5 nghìn tỷ USD.</p>
+    <h2>Nội dung chính của khung pháp lý</h2>
+    <p>Khung pháp lý mới bao gồm 5 trụ cột chính: yêu cầu đăng ký và cấp phép cho sàn giao dịch, quy định chống rửa tiền (AML) thống nhất, bảo vệ nhà đầu tư cá nhân, tiêu chuẩn về stablecoin, và quy tắc thuế xuyên biên giới. Các quốc gia thành viên có 18 tháng để triển khai vào luật nội địa.</p>
+    <blockquote>Đây là "Bretton Woods của tiền mã hóa" — một thời khắc định hình lại hệ thống tài chính toàn cầu cho thế kỷ 21. — Christine Lagarde, Chủ tịch ECB</blockquote>
+    <h2>Phản ứng của thị trường</h2>
+    <p>Ngay sau thông báo, Bitcoin tăng 15% lên mức 125.000 USD, Ethereum vượt 8.000 USD. Các nhà phân tích nhận định rằng sự rõ ràng về pháp lý là yếu tố lớn nhất mà các nhà đầu tư tổ chức đang chờ đợi. Goldman Sachs, JPMorgan và BlackRock lập tức công bố kế hoạch ra mắt các sản phẩm đầu tư crypto mới.</p>
+    <h2>Tác động đến Việt Nam</h2>
+    <p>Việt Nam hiện đứng thứ 3 thế giới về tỷ lệ sở hữu tiền mã hóa (gần 25% dân số trưởng thành) nhưng chưa có khung pháp lý chính thức. Khung G20 tạo áp lực buộc Việt Nam phải nhanh chóng ban hành quy định. Ngân hàng Nhà nước đã thành lập tổ công tác đặc biệt với mục tiêu trình dự thảo luật vào quý 4/2026.</p>
+    <ul>
+      <li>Dự kiến cấp phép cho 5-10 sàn giao dịch chính thức</li>
+      <li>Thuế suất giao dịch crypto: 0,1% cho mỗi giao dịch (đề xuất)</li>
+      <li>Bắt buộc KYC cho mọi tài khoản giao dịch</li>
+      <li>Cấm quảng cáo crypto nhắm vào người dưới 18 tuổi</li>
+    </ul>
+    <h2>Cơ hội và thách thức phía trước</h2>
+    <p>Quy định rõ ràng sẽ giúp Việt Nam thu hút đầu tư vào lĩnh vực blockchain và Web3, đồng thời bảo vệ hàng triệu nhà đầu tư cá nhân khỏi rủi ro lừa đảo. Tuy nhiên, thách thức nằm ở việc cân bằng giữa quản lý rủi ro và khuyến khích đổi mới sáng tạo — bài toán mà ngay cả các nền kinh tế phát triển cũng đang loay hoay tìm lời giải.</p>`
+  },
+  {
+    id: 38,
+    title: 'Kinh tế xanh: Xu hướng tất yếu hay bong bóng đầu tư?',
+    excerpt: 'Dòng vốn ESG toàn cầu đạt kỷ lục 50 nghìn tỷ USD, nhưng nhiều chuyên gia cảnh báo về greenwashing.',
+    category: 'kinh-doanh',
+    author: 'Ngô Thị Hương',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Thi+Huong&background=22c55e&color=fff&size=32',
+    date: '2026-02-18',
+    readTime: 11,
+    image: 'https://images.unsplash.com/photo-1473090826765-d54ac2fdc1eb?w=800&q=80',
+    featured: false,
+    views: 15630,
+    tags: ['ESG', 'Kinh tế xanh', 'Đầu tư'],
+    content: `<p>Năm 2026, dòng vốn đầu tư theo tiêu chí ESG (Môi trường, Xã hội, Quản trị) đạt mốc kỷ lục 50 nghìn tỷ USD trên toàn cầu. Từ năng lượng tái tạo đến nông nghiệp bền vững, từ xe điện đến vật liệu xanh — mọi lĩnh vực đều đang được "phủ xanh". Nhưng đằng sau con số ấn tượng là những câu hỏi nghiêm túc về tính thực chất.</p>
+    <h2>Bức tranh toàn cầu</h2>
+    <p>Châu Âu dẫn đầu với 60% tổng vốn ESG, tiếp theo là Bắc Mỹ (25%) và châu Á-Thái Bình Dương (12%). Riêng thị trường tín chỉ carbon đã đạt 2 nghìn tỷ USD — gấp đôi so với năm 2024. Các chính phủ trên toàn thế giới đang tăng cường quy định bắt buộc báo cáo ESG, đặc biệt sau khi EU áp dụng Chỉ thị Báo cáo Bền vững Doanh nghiệp (CSRD).</p>
+    <blockquote>Greenwashing không chỉ gây hại cho nhà đầu tư mà còn làm suy yếu nỗ lực chống biến đổi khí hậu thực sự. Khi mọi thứ đều "xanh", không gì thực sự xanh cả. — GS. Nguyễn Thị Mai, Đại học Kinh tế Quốc dân</blockquote>
+    <h2>Greenwashing: Mặt tối của kinh tế xanh</h2>
+    <p>Nghiên cứu của Bloomberg cho thấy hơn 40% các quỹ ESG thực tế đầu tư vào những công ty có dấu ấn carbon lớn nhưng được "đánh bóng" bằng các cam kết mơ hồ. DWS — công ty quản lý tài sản của Deutsche Bank — đã bị phạt 25 triệu EUR vì phóng đại thành tích ESG. Nhiều công ty dầu khí lớn chi hàng tỷ USD cho quảng cáo "xanh" nhưng chỉ đầu tư 3-5% doanh thu vào năng lượng tái tạo.</p>
+    <h2>Việt Nam và cơ hội kinh tế xanh</h2>
+    <p>Việt Nam đang ở vị trí thuận lợi để hưởng lợi từ xu hướng này. Cam kết Net Zero 2050 tại COP26 đã thu hút hàng tỷ USD đầu tư xanh:</p>
+    <ul>
+      <li>Điện mặt trời và điện gió đóng góp 28% sản lượng điện quốc gia (tăng từ 12% năm 2023)</li>
+      <li>Thị trường trái phiếu xanh đạt 5 tỷ USD, chủ yếu từ các ngân hàng lớn</li>
+      <li>Hơn 1.000 doanh nghiệp Việt đã áp dụng báo cáo ESG tự nguyện</li>
+      <li>Xuất khẩu nông sản hữu cơ tăng 45% so với năm trước</li>
+    </ul>
+    <h2>Lời khuyên cho nhà đầu tư</h2>
+    <p>Các chuyên gia khuyến cáo nhà đầu tư cần tỉnh táo: kiểm tra kỹ phương pháp luận ESG của từng quỹ, ưu tiên các quỹ có kiểm toán ESG độc lập, và không chạy theo xu hướng mà quên đánh giá giá trị thực. Kinh tế xanh là tương lai, nhưng như mọi xu hướng đầu tư, nó cần sự thận trọng và am hiểu.</p>`
+  },
+  {
+    id: 39,
+    title: 'Làm việc từ xa: 3 năm sau đại dịch, doanh nghiệp học được gì?',
+    excerpt: 'Mô hình hybrid work đã trở thành tiêu chuẩn mới, nhưng không phải không có những bài học đắt giá.',
+    category: 'kinh-doanh',
+    author: 'Trịnh Quang Minh',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Quang+Minh&background=22c55e&color=fff&size=32',
+    date: '2026-01-28',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80',
+    featured: false,
+    views: 19240,
+    tags: ['Remote Work', 'Doanh nghiệp', 'Nhân sự'],
+    content: `<p>Ba năm sau khi đại dịch COVID-19 thay đổi hoàn toàn cách thế giới làm việc, bức tranh về mô hình làm việc linh hoạt đã trở nên rõ ràng hơn bao giờ hết. Theo khảo sát toàn cầu của McKinsey với 25.000 doanh nghiệp, 72% đã áp dụng mô hình hybrid (kết hợp), 15% hoàn toàn từ xa, và chỉ 13% quay lại 100% văn phòng.</p>
+    <h2>Hybrid work: Không chỉ là chọn ngày đến văn phòng</h2>
+    <p>Những doanh nghiệp thành công nhất với mô hình hybrid đã vượt xa khái niệm đơn giản "3 ngày văn phòng, 2 ngày ở nhà". Họ thiết kế lại hoàn toàn cách làm việc: văn phòng chuyển từ nơi làm việc cá nhân thành không gian hợp tác, công nghệ được đầu tư để đảm bảo trải nghiệm bình đẳng giữa người ở văn phòng và người làm từ xa.</p>
+    <blockquote>Sai lầm lớn nhất là áp dụng hybrid work như một chính sách bất động sản — giảm diện tích văn phòng để tiết kiệm chi phí. Hybrid work phải là chiến lược con người, không phải chiến lược tài chính. — CEO Satya Nadella, Microsoft</blockquote>
+    <h2>Những bài học đắt giá</h2>
+    <p>Không ít doanh nghiệp đã thất bại trong việc triển khai hybrid work. Các vấn đề phổ biến bao gồm:</p>
+    <ul>
+      <li>Văn hóa "hai tầng": nhân viên ở văn phòng được ưu ái hơn trong cơ hội thăng tiến</li>
+      <li>Suy giảm sáng tạo và đổi mới do thiếu tương tác ngẫu nhiên (serendipitous encounters)</li>
+      <li>Burnout âm thầm khi ranh giới giữa công việc và cuộc sống bị xóa nhòa</li>
+      <li>Khó khăn trong onboarding và đào tạo nhân viên mới</li>
+    </ul>
+    <h2>Doanh nghiệp Việt Nam: Thích ứng nhanh nhưng chưa bền vững</h2>
+    <p>Tại Việt Nam, 58% doanh nghiệp công nghệ đã áp dụng hybrid work, nhưng chỉ 22% có chính sách chính thức bằng văn bản. Nhiều công ty "làm hybrid" theo kiểu tùy hứng, dẫn đến nhân viên bối rối và năng suất không ổn định. Các startup công nghệ Việt Nam đang dẫn đầu xu hướng với những chính sách sáng tạo: cho phép nhân viên làm việc từ bất kỳ đâu 2 tháng/năm, không giới hạn ngày phép cho nhân viên senior.</p>
+    <h2>Tương lai của công việc</h2>
+    <p>Các chuyên gia dự đoán rằng đến 2028, khái niệm "nơi làm việc cố định" sẽ gần như biến mất trong các ngành tri thức. Thay vào đó, "công việc" sẽ được định nghĩa bởi kết quả đầu ra, không phải thời gian ngồi ở đâu. Doanh nghiệp nào nắm bắt được xu hướng này sẽ có lợi thế cạnh tranh lớn trong cuộc chiến giành nhân tài toàn cầu.</p>`
+  },
+  {
+    id: 40,
+    title: 'Xuất khẩu Việt Nam vượt 400 tỷ USD: Động lực từ chip bán dẫn',
+    excerpt: 'Ngành bán dẫn trở thành trụ cột mới của xuất khẩu Việt Nam, đưa tổng kim ngạch vượt mốc lịch sử.',
+    category: 'kinh-doanh',
+    author: 'Bùi Thế Anh',
+    authorAvatar: 'https://ui-avatars.com/api/?name=The+Anh&background=22c55e&color=fff&size=32',
+    date: '2026-01-15',
+    readTime: 8,
+    image: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80',
+    featured: false,
+    views: 25610,
+    tags: ['Xuất khẩu', 'Bán dẫn', 'Kinh tế Việt Nam'],
+    content: `<p>Tổng cục Thống kê vừa công bố số liệu ấn tượng: kim ngạch xuất khẩu của Việt Nam năm 2025 đạt 412 tỷ USD, lần đầu tiên vượt mốc 400 tỷ USD. Đáng chú ý nhất là sự vươn lên mạnh mẽ của ngành chip bán dẫn — từ con số gần như bằng 0 vào năm 2022, đến năm 2025 đã đóng góp hơn 15 tỷ USD kim ngạch xuất khẩu.</p>
+    <h2>Bán dẫn: Ngôi sao mới của xuất khẩu</h2>
+    <p>Sự xuất hiện của Samsung Semiconductor, Intel mở rộng, và đặc biệt là nhà máy đóng gói chip của TSMC tại Bắc Ninh đã biến Việt Nam thành mắt xích quan trọng trong chuỗi cung ứng bán dẫn toàn cầu. Dù chủ yếu ở khâu đóng gói và kiểm thử (ATP), Việt Nam đang nhanh chóng leo lên chuỗi giá trị với việc đào tạo 10.000 kỹ sư thiết kế chip mỗi năm.</p>
+    <blockquote>Việt Nam đang ở đúng vị trí, đúng thời điểm. Cuộc tái cấu trúc chuỗi cung ứng toàn cầu hậu COVID và căng thẳng Mỹ-Trung đã tạo ra cơ hội vàng mà Việt Nam đang nắm bắt rất tốt. — TS. Nguyễn Đức Kiên, Tổ tư vấn kinh tế Chính phủ</blockquote>
+    <h2>Top 5 mặt hàng xuất khẩu 2025</h2>
+    <ul>
+      <li>Điện thoại và linh kiện: 58 tỷ USD (Samsung chiếm 90%)</li>
+      <li>Máy tính và điện tử: 62 tỷ USD (tăng 22%)</li>
+      <li>Dệt may: 44 tỷ USD (tăng 8%)</li>
+      <li>Máy móc thiết bị: 52 tỷ USD (tăng 18%)</li>
+      <li>Chip bán dẫn: 15 tỷ USD (tăng 180%)</li>
+    </ul>
+    <h2>Thách thức về cơ cấu</h2>
+    <p>Dù con số tổng thể ấn tượng, cấu trúc xuất khẩu vẫn phụ thuộc nặng vào FDI — khu vực này chiếm 73% tổng kim ngạch. Giá trị gia tăng thực sự mà doanh nghiệp Việt Nam giữ lại còn khiêm tốn, ước tính chỉ 15-20% tổng giá trị xuất khẩu. Bài toán tiếp theo là phát triển hệ sinh thái doanh nghiệp phụ trợ nội địa để tham gia sâu hơn vào chuỗi cung ứng.</p>
+    <h2>Mục tiêu 2030</h2>
+    <p>Chính phủ đặt mục tiêu kim ngạch xuất khẩu đạt 600 tỷ USD vào năm 2030, trong đó tỷ trọng hàng công nghệ cao chiếm 50%. Để đạt được, Việt Nam cần giải quyết 3 nút thắt: đào tạo nhân lực chất lượng cao, phát triển hạ tầng logistics đẳng cấp quốc tế, và nâng cao năng lực nghiên cứu-phát triển (R&D) của doanh nghiệp nội địa.</p>`
+  },
+  {
+    id: 41,
+    title: 'Khám phá đáy Mariana: Phát hiện 200 loài sinh vật chưa từng biết',
+    excerpt: 'Chuyến thám hiểm đáy đại dương sâu nhất thế giới mang về những phát hiện ngoài sức tưởng tượng.',
+    category: 'khoa-hoc',
+    author: 'Phan Thị Mai Lan',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Mai+Lan&background=a855f7&color=fff&size=32',
+    date: '2026-03-01',
+    readTime: 12,
+    image: 'https://images.unsplash.com/photo-1551244072-5d12893278ab?w=800&q=80',
+    featured: false,
+    views: 21340,
+    tags: ['Đại dương', 'Sinh vật biển', 'Khám phá'],
+    content: `<p>Chuyến thám hiểm Mariana Deep 2026, do NOAA phối hợp với JAMSTEC (Nhật Bản) thực hiện, vừa trở về sau 4 tháng khảo sát đáy Rãnh Mariana — nơi sâu nhất trên Trái Đất với độ sâu gần 11.000 mét. Kết quả vượt xa mọi kỳ vọng: 200 loài sinh vật hoàn toàn mới được phát hiện, cùng những bằng chứng về hệ sinh thái phức tạp ở nơi tưởng chừng không thể có sự sống.</p>
+    <h2>Sự sống ở nơi không tưởng</h2>
+    <p>Dưới áp suất gấp 1.100 lần bề mặt, trong bóng tối hoàn toàn và nhiệt độ gần 0°C, các nhà khoa học phát hiện một hệ sinh thái đa dạng đáng kinh ngạc. Từ vi khuẩn sống bằng năng lượng hóa học (chemosynthesis) đến các loài cá, tôm và giun ống có cấu trúc cơ thể chưa từng thấy trong bất kỳ sách giáo khoa sinh học nào.</p>
+    <blockquote>Chúng tôi đã nghĩ rằng mình biết khá nhiều về đại dương. Nhưng chuyến thám hiểm này cho thấy 95% đáy biển vẫn là vùng đất chưa được khám phá — và nó đầy bất ngờ. — TS. Yuki Tanaka, Trưởng đoàn thám hiểm</blockquote>
+    <h2>Phát hiện nổi bật</h2>
+    <p>Trong số 200 loài mới, một số đặc biệt gây chấn động giới khoa học:</p>
+    <ul>
+      <li>"Cá ma" (ghost fish) — loài cá sống ở 10.500m, có cơ thể hoàn toàn trong suốt và áp suất nội bào cực cao</li>
+      <li>Vi khuẩn Hadal-X — có thể phân hủy nhựa tự nhiên, mở ra hy vọng giải quyết ô nhiễm nhựa đại dương</li>
+      <li>"Sứa bất tử" phiên bản deep-sea — có vòng đời tái tạo liên tục, có thể chứa bí mật về chống lão hóa</li>
+      <li>Giun ống khổng lồ dài 3 mét — lớn hơn bất kỳ loài giun ống nào từng được ghi nhận</li>
+    </ul>
+    <h2>Công nghệ thám hiểm đột phá</h2>
+    <p>Chuyến thám hiểm sử dụng tàu lặn thế hệ mới DEEPSEA-7 với vỏ titan-carbon chịu được áp suất cực đại, trang bị AI phân tích hình ảnh thời gian thực và hệ thống thu mẫu tự động. Đặc biệt, một đội 12 robot lặn tự hành (AUV) đã lập bản đồ 3D chi tiết của 500 km² đáy Rãnh Mariana — diện tích lớn hơn toàn bộ thành phố Đà Nẵng.</p>
+    <h2>Ý nghĩa cho tương lai</h2>
+    <p>Ngoài giá trị khoa học thuần túy, các phát hiện này có ứng dụng tiềm năng to lớn. Vi khuẩn phân hủy nhựa Hadal-X đang được nghiên cứu để tạo ra enzyme công nghiệp xử lý rác thải nhựa. Protein chịu áp suất từ "cá ma" có thể ứng dụng trong bảo quản thực phẩm. Và cơ chế tái tạo của "sứa bất tử" đang mở ra hướng nghiên cứu mới trong y học tái tạo.</p>`
+  },
+  {
+    id: 42,
+    title: 'Sứ mệnh Mars Horizon: Mẫu đất sao Hỏa đầu tiên về Trái Đất',
+    excerpt: 'NASA và ESA hoàn thành sứ mệnh lịch sử mang mẫu vật từ sao Hỏa về phân tích trên Trái Đất.',
+    category: 'khoa-hoc',
+    author: 'Trần Đình Khoa',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Dinh+Khoa&background=a855f7&color=fff&size=32',
+    date: '2026-02-14',
+    readTime: 11,
+    image: 'https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=800&q=80',
+    featured: false,
+    views: 27800,
+    tags: ['Sao Hỏa', 'NASA', 'Khám phá vũ trụ'],
+    content: `<p>Ngày 10 tháng 2 năm 2026, một capsule nhỏ nặng 5 kg đã hạ cánh an toàn tại sa mạc Utah, Mỹ — mang theo 30 ống mẫu đất và đá từ sao Hỏa. Đây là lần đầu tiên trong lịch sử loài người có được mẫu vật trực tiếp từ một hành tinh khác, kết thúc sứ mệnh Mars Sample Return kéo dài 5 năm của NASA và ESA.</p>
+    <h2>Hành trình 5 năm đầy thử thách</h2>
+    <p>Sứ mệnh bắt đầu từ năm 2021 khi rover Perseverance đổ bộ Hố va chạm Jezero — nơi từng là một hồ nước cổ đại. Trong 3 năm, Perseverance đã thu thập 43 mẫu đất và đá từ nhiều địa điểm khác nhau, đặc biệt tập trung vào vùng đồng bằng sông cổ đại nơi khả năng tìm thấy dấu vết sự sống là cao nhất.</p>
+    <blockquote>Giây phút capsule chạm đất, 40 năm nghiên cứu và hàng tỷ USD đầu tư đã được đền đáp. Những mẫu đất nhỏ bé này có thể trả lời câu hỏi lớn nhất của nhân loại: Chúng ta có đơn độc trong vũ trụ? — Giám đốc NASA Bill Nelson</blockquote>
+    <h2>Phân tích sơ bộ gây phấn khích</h2>
+    <p>Kết quả phân tích sơ bộ trong 2 tuần đầu tiên đã khiến giới khoa học phấn khích: nhiều mẫu chứa các phân tử hữu cơ phức tạp và cấu trúc khoáng chất phù hợp với giả thuyết về sự tồn tại của nước lỏng và môi trường có thể sinh sống (habitable) trong quá khứ. Tuy nhiên, các nhà khoa học cẩn thận nhấn mạnh rằng phân tử hữu cơ không nhất thiết đồng nghĩa với sự sống.</p>
+    <h2>Quy trình phân tích nghiêm ngặt</h2>
+    <p>Các mẫu được bảo quản trong phòng thí nghiệm cách ly sinh học cấp 4 — mức an toàn cao nhất, tương tự như xử lý virus Ebola. Quy trình phân tích sẽ kéo dài ít nhất 2 năm, sử dụng công nghệ tiên tiến nhất:</p>
+    <ul>
+      <li>Kính hiển vi điện tử quét (SEM) với độ phân giải nguyên tử</li>
+      <li>Phân tích đồng vị phóng xạ để xác định tuổi mẫu vật</li>
+      <li>Quang phổ Raman để phát hiện dấu hiệu sinh học</li>
+      <li>Giải trình tự DNA/RNA để tìm kiếm vật liệu di truyền (nếu có)</li>
+    </ul>
+    <h2>Bước tiếp theo: Con người đặt chân lên sao Hỏa</h2>
+    <p>Thành công của Mars Sample Return củng cố lộ trình đưa con người lên sao Hỏa. NASA và SpaceX đang phối hợp cho sứ mệnh Artemis-Mars, dự kiến đưa phi hành gia đầu tiên đặt chân lên hành tinh đỏ vào năm 2035. Dữ liệu từ các mẫu đất sẽ giúp thiết kế bộ đồ bảo hộ, hệ thống hỗ trợ sự sống và chiến lược tìm kiếm tài nguyên tại chỗ (ISRU) cho các sứ mệnh có người lái.</p>`
+  },
+  {
+    id: 43,
+    title: 'CRISPR 3.0: Chỉnh sửa gen chữa khỏi bệnh hồng cầu hình liềm',
+    excerpt: 'Liệu pháp gen thế hệ mới đã chữa khỏi hoàn toàn cho 95% bệnh nhân hồng cầu hình liềm trong thử nghiệm lâm sàng.',
+    category: 'khoa-hoc',
+    author: 'Nguyễn Thùy Dương',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Thuy+Duong&background=a855f7&color=fff&size=32',
+    date: '2026-01-22',
+    readTime: 10,
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80',
+    featured: false,
+    views: 16920,
+    tags: ['CRISPR', 'Gen', 'Y học'],
+    content: `<p>Công nghệ chỉnh sửa gen CRISPR thế hệ 3.0 — hay còn gọi là "prime editing plus" — vừa đạt được bước đột phá chưa từng có trong lịch sử y học: chữa khỏi hoàn toàn bệnh hồng cầu hình liềm cho 95% bệnh nhân trong thử nghiệm lâm sàng giai đoạn 3 với 2.000 người tham gia.</p>
+    <h2>Từ CRISPR 1.0 đến 3.0</h2>
+    <p>CRISPR ban đầu (1.0) hoạt động như một chiếc kéo cắt DNA — hiệu quả nhưng thô. CRISPR 2.0 (base editing) cho phép thay đổi từng "chữ cái" DNA mà không cắt sợi đôi. CRISPR 3.0 (prime editing plus) tiến xa hơn: có thể chèn, xóa hoặc thay thế đoạn DNA dài đến 1.000 base pair với độ chính xác gần như tuyệt đối và tỷ lệ lỗi off-target (ngoài mục tiêu) gần bằng 0.</p>
+    <blockquote>Chúng tôi đã chờ đợi khoảnh khắc này suốt 20 năm. Lần đầu tiên trong lịch sử, chúng ta có thể nói rằng một bệnh di truyền đã được "chữa khỏi" — không chỉ điều trị triệu chứng, mà loại bỏ nguyên nhân gốc. — GS. Jennifer Doudna, Nobel Hóa học 2020</blockquote>
+    <h2>Kết quả thử nghiệm</h2>
+    <p>Trong 2.000 bệnh nhân hồng cầu hình liềm tham gia thử nghiệm, 1.900 (95%) đã có hemoglobin bình thường sau 6 tháng điều trị, với 85% không cần bất kỳ can thiệp y tế nào thêm sau 2 năm theo dõi. Tác dụng phụ nghiêm trọng chỉ xảy ra ở 2% bệnh nhân và đều có thể kiểm soát được.</p>
+    <h2>Chi phí và khả năng tiếp cận</h2>
+    <p>Hiện tại, mỗi liệu trình điều trị có giá khoảng 500.000 USD — con số khổng lồ nhưng thấp hơn nhiều so với chi phí điều trị suốt đời (ước tính 2-5 triệu USD). WHO và các tổ chức quốc tế đang đàm phán với nhà sản xuất để giảm giá cho các nước thu nhập thấp, nơi bệnh hồng cầu hình liềm phổ biến nhất (châu Phi cận Sahara và Nam Á).</p>
+    <ul>
+      <li>FDA dự kiến phê duyệt liệu pháp vào quý 3/2026</li>
+      <li>EMA (châu Âu) đang xem xét nhanh, có thể phê duyệt cuối 2026</li>
+      <li>Nghiên cứu mở rộng sang beta-thalassemia, xơ nang và loạn dưỡng cơ Duchenne</li>
+    </ul>
+    <h2>Câu hỏi đạo đức</h2>
+    <p>Thành công này cũng tái khởi động cuộc tranh luận về đạo đức chỉnh sửa gen. Nếu chúng ta có thể chỉnh sửa gen gây bệnh, liệu có nên chỉnh sửa gen để tăng cường trí thông minh hay thể lực? Ranh giới giữa "chữa bệnh" và "nâng cấp" con người ngày càng mờ nhạt, đòi hỏi xã hội phải có những cuộc thảo luận nghiêm túc và khung đạo đức rõ ràng.</p>`
+  },
+  {
+    id: 44,
+    title: 'Biến đổi khí hậu 2026: Năm nóng nhất lịch sử và hệ quả',
+    excerpt: 'Nhiệt độ trung bình toàn cầu vượt ngưỡng 1,5°C so với thời kỳ tiền công nghiệp, kích hoạt chuỗi hiện tượng cực đoan.',
+    category: 'khoa-hoc',
+    author: 'Lê Hoàng Nam',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Hoang+Nam&background=a855f7&color=fff&size=32',
+    date: '2026-03-10',
+    readTime: 13,
+    image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80',
+    featured: false,
+    views: 28450,
+    tags: ['Biến đổi khí hậu', 'Môi trường', 'Toàn cầu'],
+    content: `<p>Tổ chức Khí tượng Thế giới (WMO) xác nhận: năm 2025 là năm nóng nhất trong lịch sử ghi nhận, với nhiệt độ trung bình toàn cầu cao hơn 1,52°C so với thời kỳ tiền công nghiệp. Ngưỡng 1,5°C — giới hạn "an toàn" được Thỏa thuận Paris đặt ra — đã bị vượt qua lần đầu tiên trên cơ sở trung bình năm, sớm hơn dự báo 5 năm.</p>
+    <h2>Chuỗi hiện tượng cực đoan chưa từng có</h2>
+    <p>Năm 2025 chứng kiến hàng loạt kỷ lục thời tiết cực đoan bị phá vỡ: sóng nhiệt 52°C ở Ấn Độ, cháy rừng tàn phá 15 triệu hecta ở Canada và Siberia, lũ lụt "500 năm có một" xảy ra liên tiếp ở Pakistan và Brazil, và mùa bão Đại Tây Dương kỷ lục với 25 cơn bão được đặt tên. Tổng thiệt hại kinh tế ước tính vượt 500 tỷ USD.</p>
+    <blockquote>Chúng ta không còn đang nói về tương lai nữa — biến đổi khí hậu đang xảy ra ngay bây giờ, ngay trước mắt chúng ta. Mỗi phần mười độ C tăng thêm đều đồng nghĩa với hàng triệu người bị ảnh hưởng. — Tổng thư ký LHQ António Guterres</blockquote>
+    <h2>Việt Nam: Một trong những nước chịu ảnh hưởng nặng nhất</h2>
+    <p>Với 3.260 km bờ biển và Đồng bằng sông Cửu Long — "vựa lúa" nuôi sống 20 triệu người — đang bị xâm nhập mặn ngày càng nghiêm trọng, Việt Nam nằm trong top 10 quốc gia dễ bị tổn thương nhất bởi biến đổi khí hậu. Năm 2025, mực nước biển tại Việt Nam đã tăng 25cm so với năm 1990, đe dọa trực tiếp sinh kế của hàng triệu nông dân.</p>
+    <h2>Những nỗ lực ứng phó</h2>
+    <p>Dù tình hình nghiêm trọng, có những tín hiệu tích cực:</p>
+    <ul>
+      <li>Năng lượng tái tạo chiếm 35% sản lượng điện toàn cầu (tăng từ 29% năm 2023)</li>
+      <li>Doanh số xe điện vượt xe xăng lần đầu tiên tại châu Âu</li>
+      <li>Trung Quốc đạt đỉnh phát thải CO2 sớm hơn cam kết 2 năm</li>
+      <li>Công nghệ thu giữ carbon (CCS) giảm chi phí 60% trong 3 năm</li>
+      <li>Quỹ Khí hậu Xanh đạt 200 tỷ USD, hỗ trợ các nước đang phát triển</li>
+    </ul>
+    <h2>Con đường phía trước</h2>
+    <p>Các nhà khoa học nhấn mạnh rằng vượt ngưỡng 1,5°C không có nghĩa là "game over" — mỗi phần mười độ C được ngăn chặn đều cứu được hàng triệu sinh mạng và hàng nghìn tỷ USD. COP31 sắp diễn ra tại Úc vào cuối 2026 được kỳ vọng sẽ đưa ra các cam kết mạnh mẽ hơn, đặc biệt về tài chính khí hậu cho các nước đang phát triển.</p>`
+  },
+  {
+    id: 45,
+    title: 'Điện ảnh Việt Nam bùng nổ: Khi phim Việt chinh phục khán giả quốc tế',
+    excerpt: 'Hàng loạt phim Việt Nam đạt doanh thu trăm tỷ và được mời tham dự các liên hoan phim quốc tế uy tín.',
+    category: 'giai-tri',
+    author: 'Đỗ Minh Châu',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Minh+Chau&background=ec4899&color=fff&size=32',
+    date: '2026-03-07',
+    readTime: 8,
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80',
+    featured: false,
+    views: 19870,
+    tags: ['Điện ảnh', 'Phim Việt', 'Văn hóa'],
+    content: `<p>Năm 2025-2026 được giới chuyên gia đánh giá là "kỷ nguyên vàng" của điện ảnh Việt Nam. Không chỉ liên tiếp có phim đạt doanh thu trên 200 tỷ đồng tại thị trường nội địa, nhiều tác phẩm còn được mời tranh giải tại các liên hoan phim danh giá: Cannes, Venice, Toronto và Busan.</p>
+    <h2>Doanh thu kỷ lục</h2>
+    <p>Thị trường phim chiếu rạp Việt Nam năm 2025 đạt tổng doanh thu 6.200 tỷ đồng, tăng 35% so với năm trước. Đáng chú ý, phim Việt chiếm 42% tổng doanh thu — mức cao nhất từ trước đến nay, vượt qua cả phim Hollywood tại sân nhà. Bộ phim "Bến Không Chồng" của đạo diễn Trần Anh Hùng đã thu về 320 tỷ đồng, trở thành phim Việt có doanh thu cao nhất mọi thời đại.</p>
+    <blockquote>Điện ảnh Việt Nam đang trải qua giai đoạn phát triển tương tự Hàn Quốc 15 năm trước — khi chất lượng nội dung tăng vọt kéo theo sự quan tâm của quốc tế. Chúng ta đang ở ngưỡng cửa bước ra thế giới. — Đạo diễn Nguyễn Quang Dũng</blockquote>
+    <h2>Chất lượng vượt trội</h2>
+    <p>Điều khác biệt lớn nhất so với trước đây là chất lượng. Các nhà làm phim trẻ Việt Nam được đào tạo bài bản ở nước ngoài, kết hợp kỹ thuật hiện đại với câu chuyện đậm chất Việt Nam. Thể loại cũng đa dạng hơn: từ phim kinh dị tâm lý, drama xã hội đến animation — không còn chỉ là hài Tết hay phim tình cảm sến súa.</p>
+    <h2>Nhân tố thay đổi cuộc chơi</h2>
+    <ul>
+      <li>Quỹ Điện ảnh Quốc gia hỗ trợ 500 tỷ đồng/năm cho phim nghệ thuật</li>
+      <li>Netflix, Disney+ đầu tư sản xuất phim gốc tiếng Việt</li>
+      <li>Công nghệ VFX/CGI trong nước phát triển mạnh với chi phí thấp</li>
+      <li>Thế hệ đạo diễn trẻ (8X, 9X) mang tư duy quốc tế nhưng bản sắc Việt</li>
+      <li>Hệ thống rạp chiếu mở rộng đến các thành phố cấp 2, cấp 3</li>
+    </ul>
+    <h2>Thách thức còn tồn tại</h2>
+    <p>Dù có nhiều tín hiệu tích cực, điện ảnh Việt Nam vẫn đối mặt với thách thức: thiếu hệ thống phát hành quốc tế chuyên nghiệp, vấn đề kiểm duyệt đôi khi hạn chế sáng tạo, và thị trường phim phụ thuộc quá nhiều vào mùa Tết. Xây dựng thương hiệu "Vietnamese Cinema" trên bản đồ điện ảnh thế giới cần chiến lược dài hơi và sự phối hợp giữa nhà nước, nhà sản xuất và nghệ sĩ.</p>`
+  },
+  {
+    id: 46,
+    title: 'Concert ảo và Metaverse: Cách giải trí thay đổi hoàn toàn',
+    excerpt: 'Hàng triệu người tham dự concert trong thế giới ảo, xóa nhòa ranh giới giữa thực và số.',
+    category: 'giai-tri',
+    author: 'Vũ Khánh Linh',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Khanh+Linh&background=ec4899&color=fff&size=32',
+    date: '2026-02-20',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
+    featured: false,
+    views: 14560,
+    tags: ['Metaverse', 'Concert', 'Giải trí số'],
+    content: `<p>Tháng 2/2026, concert ảo của nghệ sĩ Sơn Tùng M-TP trên nền tảng Metaverse của VNG đã thu hút 5 triệu người tham dự đồng thời — phá kỷ lục mọi sự kiện giải trí trực tuyến tại Việt Nam. Người xem không chỉ nghe nhạc mà được tương tác trực tiếp: chọn góc nhìn 360°, nhảy cùng avatar của nghệ sĩ, và mua merchandise kỹ thuật số giới hạn.</p>
+    <h2>Từ xem concert đến "sống" trong concert</h2>
+    <p>Với kính VR thế hệ mới (nhẹ chỉ 200g, pin 8 giờ), trải nghiệm concert ảo đã khác hoàn toàn so với việc xem livestream. Người dùng cảm giác như đang đứng giữa đám đông, nghe âm thanh spatial 3D thay đổi theo vị trí, và thậm chí cảm nhận được rung động của bass thông qua haptic feedback trên tay cầm VR.</p>
+    <blockquote>Lần đầu tiên tôi tham dự concert ảo, tôi nghĩ nó sẽ giống xem YouTube. Nhưng khi đeo kính VR vào, tôi thực sự quên mất mình đang ở nhà. Cảm giác như đang ở hàng VIP của một show thật sự. — Nguyễn Thu Hà, người tham dự</blockquote>
+    <h2>Mô hình kinh doanh mới</h2>
+    <p>Concert ảo không chỉ là giải trí mà còn là cỗ máy kiếm tiền hiệu quả. So sánh với concert truyền thống:</p>
+    <ul>
+      <li>Sức chứa: không giới hạn (so với 20.000-80.000 khán giả tại sân vận động)</li>
+      <li>Chi phí tổ chức: giảm 70% (không cần thuê địa điểm, an ninh, logistics)</li>
+      <li>Doanh thu bổ sung: NFT, avatar items, virtual meet-and-greet</li>
+      <li>Khả năng replay: người dùng trả phí xem lại không giới hạn</li>
+    </ul>
+    <h2>Nghệ sĩ Việt tiên phong</h2>
+    <p>Sau Sơn Tùng M-TP, nhiều nghệ sĩ Việt Nam đã lên kế hoạch concert ảo: Mỹ Tâm chuẩn bị show kỷ niệm 25 năm ca hát trong Metaverse, Đen Vâu hợp tác với studio game Việt tạo "thế giới nhạc rap" ảo. Các công ty giải trí lớn như Đông Nhi Entertainment và SpaceSpeakers đã thành lập bộ phận chuyên trách về giải trí Metaverse.</p>
+    <h2>Tương lai hay chỉ là trào lưu?</h2>
+    <p>Dù tiềm năng to lớn, nhiều người vẫn hoài nghi: liệu concert ảo có thay thế được cảm xúc thật khi đứng giữa biển người, cùng hát theo nghệ sĩ yêu thích? Có lẽ câu trả lời là "cả hai" — concert ảo sẽ bổ sung chứ không thay thế concert truyền thống, tạo ra một thị trường giải trí đa tầng, đa nền tảng.</p>`
+  },
+  {
+    id: 47,
+    title: 'Anime và manga: Làn sóng văn hóa Nhật Bản chinh phục Gen Z Việt',
+    excerpt: 'Từ cosplay đến fan-sub, thế hệ trẻ Việt Nam đang sống và thở cùng văn hóa anime-manga.',
+    category: 'giai-tri',
+    author: 'Trương Yến Nhi',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Yen+Nhi&background=ec4899&color=fff&size=32',
+    date: '2026-02-05',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&q=80',
+    featured: false,
+    views: 12340,
+    tags: ['Anime', 'Manga', 'Gen Z'],
+    content: `<p>Theo khảo sát của Nielsen Vietnam, 68% người Việt Nam từ 15-30 tuổi xem anime hoặc đọc manga ít nhất một lần mỗi tuần. Con số này tăng gấp đôi so với 5 năm trước, cho thấy văn hóa anime-manga đã từ "sở thích nhỏ lẻ" trở thành hiện tượng văn hóa đại chúng tại Việt Nam.</p>
+    <h2>Không chỉ là giải trí</h2>
+    <p>Anime và manga đã vượt xa phạm vi giải trí đơn thuần. Chúng ảnh hưởng đến thời trang (phong cách Harajuku, streetwear anime-inspired), ẩm thực (nhà hàng themed anime mọc lên khắp Hà Nội và TP.HCM), nghệ thuật (họa sĩ Việt vẽ manga với bối cảnh Việt Nam), và thậm chí cả ngôn ngữ hàng ngày (giới trẻ sử dụng các thuật ngữ anime như "senpai", "kawaii", "otaku").</p>
+    <blockquote>Anime không chỉ là phim hoạt hình — đó là một cách kể chuyện, một triết lý sống. Những bộ anime hay dạy bạn về tình bạn, sự kiên trì, công lý và ý nghĩa cuộc sống sâu sắc không kém bất kỳ tác phẩm văn học kinh điển nào. — Nguyễn Hoàng Long, founder cộng đồng Anime Vietnam (500K thành viên)</blockquote>
+    <h2>Thị trường anime-manga Việt Nam</h2>
+    <p>Thị trường manga bản quyền tại Việt Nam đã đạt 1.500 tỷ đồng doanh thu năm 2025, với NXB Kim Đồng, Trẻ và IPM là ba nhà phát hành chính. Các nền tảng streaming anime (Crunchyroll, Bilibili) có hơn 3 triệu subscriber trả phí tại Việt Nam.</p>
+    <ul>
+      <li>One Piece vẫn là manga bán chạy nhất tại Việt Nam suốt 10 năm liên tiếp</li>
+      <li>Sự kiện cosplay Comic-Con Sài Gòn 2025 thu hút 80.000 người tham dự</li>
+      <li>Manga "made in Vietnam" đầu tiên — "Huyền Thoại Lạc Hồng" — bán được 200.000 bản</li>
+      <li>Ngành cosplay chuyên nghiệp tạo việc làm cho hơn 5.000 người</li>
+    </ul>
+    <h2>Tranh cãi và lo ngại</h2>
+    <p>Không phải mọi thứ đều tích cực. Nhiều phụ huynh và nhà giáo dục lo ngại về ảnh hưởng tiêu cực: nội dung bạo lực hoặc nhạy cảm trong một số bộ anime, hiện tượng "hikikomori" (tự cô lập) ở giới trẻ nghiện anime, và việc quá mê mải văn hóa ngoại lai có thể làm lu mờ bản sắc văn hóa Việt.</p>
+    <h2>Cơ hội cho ngành sáng tạo Việt Nam</h2>
+    <p>Thay vì chỉ tiêu thụ, Việt Nam đang bắt đầu sản xuất. Nhiều studio animation Việt Nam (Colory, DeeDee Animation) đã nhận outsource từ các studio Nhật Bản, tích lũy kinh nghiệm để tạo ra IP (tài sản trí tuệ) riêng. Giấc mơ về một "anime Việt Nam" không còn xa vời — nó đang dần trở thành hiện thực.</p>`
+  },
+  {
+    id: 48,
+    title: 'Sức khỏe tâm thần: Cuộc khủng hoảng thầm lặng của thế hệ số',
+    excerpt: 'Tỷ lệ trầm cảm và lo âu ở người trẻ tăng 40% trong 5 năm, nhưng 70% không tìm kiếm sự giúp đỡ.',
+    category: 'doi-song',
+    author: 'Mai Phương Thảo',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Phuong+Thao&background=f97316&color=fff&size=32',
+    date: '2026-03-11',
+    readTime: 10,
+    image: 'https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=800&q=80',
+    featured: false,
+    views: 24130,
+    tags: ['Sức khỏe tâm thần', 'Gen Z', 'Xã hội'],
+    content: `<p>Báo cáo mới nhất của WHO cho thấy tỷ lệ mắc trầm cảm và rối loạn lo âu ở nhóm tuổi 18-35 đã tăng 40% trên toàn cầu trong 5 năm qua. Tại Việt Nam, con số thậm chí còn đáng lo ngại hơn: ước tính 30% người trẻ có dấu hiệu vấn đề sức khỏe tâm thần, nhưng 70% không bao giờ tìm đến chuyên gia.</p>
+    <h2>Nguyên nhân đa tầng</h2>
+    <p>Các chuyên gia tâm lý chỉ ra rằng không có một nguyên nhân đơn lẻ nào mà là sự kết hợp của nhiều yếu tố: áp lực mạng xã hội và văn hóa so sánh, bất ổn kinh tế và lo lắng về tương lai, cô lập xã hội hậu đại dịch, và đặc biệt — sự quá tải thông tin trong kỷ nguyên số. Não bộ con người tiến hóa để xử lý thông tin từ một cộng đồng nhỏ, không phải từ cả thế giới cùng lúc.</p>
+    <blockquote>Chúng ta đang sống trong thời đại kết nối nhất nhưng cũng cô đơn nhất trong lịch sử nhân loại. Paradox này — "connected yet lonely" — là gốc rễ của cuộc khủng hoảng sức khỏe tâm thần hiện tại. — TS. Nguyễn Hữu Long, Viện Sức khỏe Tâm thần Quốc gia</blockquote>
+    <h2>Rào cản tìm kiếm giúp đỡ</h2>
+    <p>Tại Việt Nam, kỳ thị xã hội (stigma) vẫn là rào cản lớn nhất. Nhiều người trẻ sợ bị coi là "yếu đuối" hoặc "có vấn đề" nếu thừa nhận cần hỗ trợ tâm lý. Ngoài ra, chi phí tư vấn tâm lý chuyên nghiệp (500.000 - 1.500.000 đồng/buổi) vượt khả năng chi trả của nhiều người, và cả nước chỉ có khoảng 400 nhà tâm lý lâm sàng được cấp phép — tỷ lệ 1 nhà tâm lý cho 250.000 người dân.</p>
+    <h2>Giải pháp đang được triển khai</h2>
+    <ul>
+      <li>App tư vấn tâm lý trực tuyến "BetterDay" (Việt Nam) đạt 500.000 người dùng, giá chỉ 200.000đ/buổi</li>
+      <li>Chương trình tâm lý học đường bắt buộc tại 5.000 trường THPT trên toàn quốc</li>
+      <li>Hotline sức khỏe tâm thần miễn phí 1800-599-100 hoạt động 24/7</li>
+      <li>Các doanh nghiệp lớn (FPT, Vingroup, Viettel) đưa chăm sóc tâm lý vào phúc lợi nhân viên</li>
+      <li>AI chatbot hỗ trợ tâm lý sơ bộ, sàng lọc và chuyển đến chuyên gia khi cần</li>
+    </ul>
+    <h2>Thay đổi nhận thức là chìa khóa</h2>
+    <p>Tin tích cực là nhận thức về sức khỏe tâm thần đang dần thay đổi, đặc biệt ở Gen Z. Nhiều nghệ sĩ, KOL công khai chia sẻ trải nghiệm với trầm cảm và lo âu, giúp bình thường hóa việc tìm kiếm giúp đỡ. "Chăm sóc sức khỏe tâm thần không khác gì đi khám bệnh khi bị cảm cúm — nó bình thường, và nên được bình thường hóa," một bạn trẻ chia sẻ trên mạng xã hội, nhận được hàng trăm nghìn lượt đồng tình.</p>`
+  },
+  {
+    id: 49,
+    title: 'Thời trang bền vững: Khi Gen Z nói không với fast fashion',
+    excerpt: 'Phong trào thời trang bền vững bùng nổ tại Việt Nam khi giới trẻ ý thức hơn về tác động môi trường.',
+    category: 'doi-song',
+    author: 'Hoàng Thị Ngọc Ánh',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Ngoc+Anh&background=f97316&color=fff&size=32',
+    date: '2026-02-28',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80',
+    featured: false,
+    views: 11250,
+    tags: ['Thời trang', 'Bền vững', 'Lối sống'],
+    content: `<p>Ngành thời trang là ngành gây ô nhiễm lớn thứ hai thế giới, sau dầu khí. Mỗi năm, 92 triệu tấn quần áo bị vứt bỏ trên toàn cầu, phần lớn kết thúc tại các bãi rác ở châu Á và châu Phi. Nhưng một thế hệ người tiêu dùng mới đang nói "không" — và Việt Nam không phải ngoại lệ.</p>
+    <h2>Phong trào thrifting bùng nổ</h2>
+    <p>Từ Hà Nội đến TP.HCM, các cửa hàng đồ secondhand (thrift shop) mọc lên như nấm. Chợ phiên quần áo cũ "Cần Gì Mua Mới" tổ chức hàng tháng tại các thành phố lớn, mỗi phiên thu hút 3.000-5.000 người tham gia. Trên TikTok, hashtag #ThriftFlipVietnam có hơn 500 triệu lượt xem, nơi các bạn trẻ chia sẻ cách biến quần áo cũ thành items thời trang độc đáo.</p>
+    <blockquote>Thời trang bền vững không phải là từ bỏ phong cách — mà là phong cách một cách có trách nhiệm. Khi bạn mặc đồ secondhand hay ủng hộ thương hiệu bền vững, bạn đang làm một fashion statement mạnh mẽ nhất. — Hà Kino, nhà thiết kế thời trang bền vững Việt Nam</blockquote>
+    <h2>Thương hiệu Việt tiên phong</h2>
+    <p>Nhiều thương hiệu thời trang Việt Nam đã chuyển hướng sang bền vững:</p>
+    <ul>
+      <li>METISEKO — sử dụng 100% lụa tơ tằm hữu cơ và nhuộm tự nhiên</li>
+      <li>Kilomet109 — vải dệt thủ công từ các làng nghề dân tộc thiểu số</li>
+      <li>Dong Clothing — quần áo từ vải tái chế, đóng gói không nhựa</li>
+      <li>LAIKA — giày thể thao từ nhựa tái chế thu gom từ biển Việt Nam</li>
+    </ul>
+    <h2>Thay đổi hành vi tiêu dùng</h2>
+    <p>Khảo sát của Kantar cho thấy 55% người Việt dưới 30 tuổi sẵn sàng trả thêm 20-30% cho sản phẩm thời trang bền vững — con số cao hơn đáng kể so với trung bình toàn cầu (38%). Xu hướng "capsule wardrobe" (tủ quần áo tối giản) và "outfit repeating" (mặc lại đồ không xấu hổ) đang trở thành phong cách sống được ngưỡng mộ thay vì bị coi thường.</p>
+    <h2>Con đường còn dài</h2>
+    <p>Dù phong trào đang lan rộng, fast fashion vẫn chiếm 80% thị phần thời trang Việt Nam. Shein, Temu và các nền tảng thương mại điện tử giá rẻ vẫn có sức hút mạnh mẽ. Thay đổi thực sự cần sự kết hợp giữa ý thức cá nhân, quy định của nhà nước (như thuế môi trường lên fast fashion) và sự sáng tạo của các thương hiệu bền vững trong việc cạnh tranh về giá.</p>`
+  },
+  {
+    id: 50,
+    title: 'Digital Detox: Xu hướng "cai nghiện" công nghệ của giới trẻ',
+    excerpt: 'Ngày càng nhiều người trẻ tự nguyện giảm thời gian dùng điện thoại và mạng xã hội để tìm lại sự cân bằng.',
+    category: 'doi-song',
+    author: 'Lương Thế Vinh',
+    authorAvatar: 'https://ui-avatars.com/api/?name=The+Vinh&background=f97316&color=fff&size=32',
+    date: '2026-02-12',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    featured: false,
+    views: 17890,
+    tags: ['Digital Detox', 'Công nghệ', 'Sức khỏe'],
+    content: `<p>Trong một nghịch lý thú vị của thời đại số, xu hướng "digital detox" — tự nguyện giảm hoặc ngắt kết nối với thiết bị điện tử — đang trở thành phong trào toàn cầu. Tại Việt Nam, hashtag #DigitalDetoxVN có hơn 200 triệu lượt xem trên TikTok (đúng, họ dùng TikTok để quảng bá việc bỏ TikTok), và các retreat "không điện thoại" luôn cháy vé trước cả tháng.</p>
+    <h2>Thực trạng đáng báo động</h2>
+    <p>Người Việt Nam trung bình dành 6,5 giờ/ngày trên smartphone — cao hơn mức trung bình thế giới (6 giờ). Giới trẻ 18-24 tuổi thậm chí dành 8-9 giờ. Nghiên cứu của Đại học Quốc gia Hà Nội cho thấy 45% sinh viên có dấu hiệu "nghiện smartphone" theo tiêu chuẩn y khoa, với triệu chứng lo âu khi không có điện thoại bên cạnh (nomophobia).</p>
+    <blockquote>Tôi đã thử một tuần không dùng mạng xã hội và nhận ra mình có thêm 3 giờ mỗi ngày — đủ để đọc một cuốn sách, tập thể dục và nấu ăn. Tôi không biết mình đã "mất" bao nhiêu thời gian trước đó. — Blogger Minh Ngọc, 100K follower (đã xóa Instagram)</blockquote>
+    <h2>Các hình thức digital detox phổ biến</h2>
+    <ul>
+      <li>"Phone-free Sunday": không dùng điện thoại cả ngày Chủ nhật</li>
+      <li>"Dumbphone movement": chuyển sang điện thoại cục gạch cho cuối tuần</li>
+      <li>Retreat không công nghệ: 3-7 ngày tại thiên nhiên, nộp điện thoại khi check-in</li>
+      <li>App giới hạn thời gian: Forest, Opal, ScreenZen đạt hàng triệu lượt tải tại VN</li>
+      <li>"Analog hobbies": vẽ tranh, làm gốm, viết nhật ký tay — quay về sở thích offline</li>
+    </ul>
+    <h2>Doanh nghiệp cũng tham gia</h2>
+    <p>Nhiều công ty Việt Nam bắt đầu áp dụng chính sách "focus time" — 2-3 giờ mỗi ngày không email, không tin nhắn, không họp. FPT Software thử nghiệm "No-Meeting Wednesday" và báo cáo năng suất tăng 25%. Một số quán cà phê "không Wi-Fi" ở Đà Lạt và Hội An trở thành điểm đến hot, nơi khách hàng đến để đọc sách, trò chuyện và thực sự thưởng thức cà phê.</p>
+    <h2>Cân bằng là chìa khóa</h2>
+    <p>Các chuyên gia nhấn mạnh rằng digital detox không phải về việc từ bỏ công nghệ — điều đó không thực tế và cũng không cần thiết. Mục tiêu là xây dựng mối quan hệ lành mạnh với công nghệ: sử dụng nó như công cụ phục vụ cuộc sống, thay vì để nó kiểm soát cuộc sống. "Công nghệ nên là người hầu tốt, không phải ông chủ tệ," như một nhà tâm lý đã nói.</p>`
+  },
+  {
+    id: 51,
+    title: 'Lực lượng gìn giữ hòa bình LHQ: Vai trò ngày càng lớn của Việt Nam',
+    excerpt: 'Việt Nam tăng cường đóng góp cho hoạt động gìn giữ hòa bình LHQ, khẳng định vị thế trên trường quốc tế.',
+    category: 'the-gioi',
+    author: 'Nguyễn Trọng Nghĩa',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Trong+Nghia&background=ef4444&color=fff&size=32',
+    date: '2026-03-03',
+    readTime: 9,
+    image: 'https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80',
+    featured: false,
+    views: 13470,
+    tags: ['Liên Hợp Quốc', 'Hòa bình', 'Việt Nam'],
+    content: `<p>Tháng 3/2026, Việt Nam cử thêm 200 quân nhân tham gia Phái bộ Gìn giữ Hòa bình Liên Hợp Quốc tại Nam Sudan (UNMISS), nâng tổng số quân nhân Việt Nam trong các phái bộ LHQ lên 800 — mức cao nhất từ khi tham gia hoạt động này năm 2014. Đây là bước tiến quan trọng trong chiến lược ngoại giao quốc phòng của Việt Nam.</p>
+    <h2>Hành trình 12 năm</h2>
+    <p>Từ những bước đi đầu tiên với 2 sĩ quan quân sự tham gia giám sát tại Nam Sudan năm 2014, Việt Nam đã phát triển năng lực gìn giữ hòa bình một cách có hệ thống. Đến nay, Việt Nam đã triển khai bệnh viện dã chiến cấp 2, đội công binh, đội quân y và các sĩ quan tham mưu tại nhiều phái bộ ở châu Phi và Trung Đông.</p>
+    <blockquote>Việt Nam — từ một quốc gia từng chịu nhiều đau thương chiến tranh — nay đang đóng góp tích cực cho hòa bình thế giới. Đây là thông điệp mạnh mẽ nhất mà Việt Nam gửi đến cộng đồng quốc tế. — Tổng thư ký LHQ António Guterres</blockquote>
+    <h2>Đóng góp được ghi nhận</h2>
+    <p>Bệnh viện dã chiến cấp 2 của Việt Nam tại Nam Sudan đã điều trị hơn 15.000 bệnh nhân, thực hiện 2.000 ca phẫu thuật và được LHQ đánh giá là một trong những bệnh viện dã chiến hoạt động hiệu quả nhất. Đội công binh Việt Nam đã rà phá hơn 50.000 m² bom mìn — kinh nghiệm quý báu tích lũy từ việc xử lý bom mìn hậu chiến tranh trên chính đất nước mình.</p>
+    <ul>
+      <li>800 quân nhân đang phục vụ tại 4 phái bộ LHQ</li>
+      <li>Bệnh viện dã chiến cấp 2 tại Nam Sudan hoạt động liên tục từ 2018</li>
+      <li>Đội công binh triển khai tại Abyei (vùng tranh chấp Sudan-Nam Sudan)</li>
+      <li>15 sĩ quan nữ tham gia — tỷ lệ cao hơn trung bình LHQ</li>
+      <li>0 sự cố kỷ luật trong suốt 12 năm hoạt động</li>
+    </ul>
+    <h2>Ý nghĩa chiến lược</h2>
+    <p>Tham gia gìn giữ hòa bình LHQ giúp Việt Nam nâng cao vị thế quốc tế, rèn luyện quân đội trong môi trường tác chiến đa quốc gia, và tích lũy kinh nghiệm phòng chống thiên tai-nhân đạo. Đây cũng là bàn đạp để Việt Nam ứng cử vào các vị trí quan trọng tại LHQ và các tổ chức quốc tế.</p>
+    <h2>Kế hoạch tương lai</h2>
+    <p>Bộ Quốc phòng đặt mục tiêu đưa 1.500 quân nhân tham gia gìn giữ hòa bình vào năm 2030, đồng thời mở rộng sang các lĩnh vực mới: bảo vệ dân thường, hỗ trợ nhân đạo sau xung đột, và đào tạo lực lượng an ninh địa phương. Trung tâm Gìn giữ Hòa bình Việt Nam tại Hà Nội cũng trở thành cơ sở đào tạo cho quân nhân ASEAN.</p>`
+  },
+  {
+    id: 52,
+    title: 'Cuộc đua vũ trụ 2.0: Khi tư nhân dẫn đầu và các cường quốc cạnh tranh',
+    excerpt: 'SpaceX, Blue Origin và các cường quốc đang biến không gian thành chiến trường cạnh tranh mới của thế kỷ 21.',
+    category: 'the-gioi',
+    author: 'Phạm Anh Dũng',
+    authorAvatar: 'https://ui-avatars.com/api/?name=Anh+Dung&background=ef4444&color=fff&size=32',
+    date: '2026-02-08',
+    readTime: 12,
+    image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80',
+    featured: false,
+    views: 20150,
+    tags: ['Vũ trụ', 'SpaceX', 'Địa chính trị'],
+    content: `<p>Năm 2026, cuộc đua vũ trụ không còn là câu chuyện giữa hai siêu cường Mỹ-Liên Xô như thời Chiến tranh Lạnh. Đây là cuộc cạnh tranh đa cực với sự tham gia của Trung Quốc, Ấn Độ, UAE, và đặc biệt — các công ty tư nhân có ngân sách vượt xa nhiều chương trình vũ trụ quốc gia.</p>
+    <h2>SpaceX: Từ startup đến đế chế vũ trụ</h2>
+    <p>Với Starship — tên lửa lớn nhất lịch sử — SpaceX đã thực hiện 15 chuyến bay thành công trong năm 2025, đưa chi phí vận chuyển lên quỹ đạo xuống còn 200 USD/kg — rẻ hơn 100 lần so với Space Shuttle. Mạng lưới Starlink có 6.000 vệ tinh cung cấp Internet cho 100 triệu người dùng. Elon Musk tuyên bố sẽ đưa người lên sao Hỏa trước 2030.</p>
+    <blockquote>Cuộc đua vũ trụ thế kỷ 21 không chỉ về khoa học hay uy tín quốc gia — đó là về tài nguyên, kinh tế và quyền lực. Ai kiểm soát không gian sẽ kiểm soát tương lai. — GS. John Logsdon, Đại học George Washington</blockquote>
+    <h2>Trung Quốc: Đối thủ đáng gờm</h2>
+    <p>Trung Quốc đang thực hiện chương trình vũ trụ tham vọng nhất kể từ Apollo: Trạm vũ trụ Tiangong hoạt động thường trực với 6 phi hành gia, sứ mệnh lấy mẫu Mặt Trăng thành công (Chang'e 6), và kế hoạch xây dựng căn cứ Mặt Trăng vào 2028 — trước Mỹ 2 năm theo lộ trình hiện tại.</p>
+    <h2>Các mặt trận cạnh tranh</h2>
+    <ul>
+      <li><strong>Mặt Trăng:</strong> Mỹ (Artemis) vs Trung Quốc (ILRS) — cả hai nhắm xây căn cứ thường trực</li>
+      <li><strong>Sao Hỏa:</strong> SpaceX vs NASA — đua đưa người đầu tiên đặt chân lên hành tinh đỏ</li>
+      <li><strong>Khai thác tiểu hành tinh:</strong> AstroForge, TransAstra — mỏ vàng triệu tỷ USD ngoài vũ trụ</li>
+      <li><strong>Du lịch vũ trụ:</strong> Blue Origin, Virgin Galactic — 10.000 người đã bay ra không gian</li>
+      <li><strong>Vệ tinh Internet:</strong> Starlink vs Kuiper (Amazon) vs Guowang (Trung Quốc)</li>
+    </ul>
+    <h2>Vấn đề pháp lý và an ninh</h2>
+    <p>Hiệp ước Ngoài vũ trụ 1967 — bộ luật chính điều chỉnh hoạt động không gian — được viết trong thời đại hoàn toàn khác và ngày càng lỗi thời. Ai sở hữu tài nguyên khai thác từ tiểu hành tinh? Quốc gia nào có quyền thiết lập "vùng an toàn" xung quanh căn cứ Mặt Trăng? Vũ khí không gian có nên bị cấm? Những câu hỏi này đang trở nên cấp bách khi không gian ngày càng đông đúc.</p>
+    <h2>Việt Nam trong bản đồ vũ trụ</h2>
+    <p>Việt Nam hiện có vệ tinh viễn thám VNREDSat-1 và đang phát triển VNREDSat-2. Trung tâm Vũ trụ Việt Nam (VNSC) tập trung vào ứng dụng công nghệ vệ tinh cho giám sát môi trường, nông nghiệp và phòng chống thiên tai — những lĩnh vực thiết thực cho đất nước. Dù không tham gia cuộc đua lớn, Việt Nam đang xây dựng nền tảng để không bị bỏ lại phía sau trong kỷ nguyên vũ trụ mới.</p>`
   }
 ];
 
