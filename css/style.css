@@ -465,6 +465,114 @@
   color: #9ca3af;
 }
 
+/* ===== Carousel ===== */
+.carousel-section {
+  background: #0d0f1a;
+  padding: 3rem 0;
+}
+
+#carouselTrack {
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+#carouselTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  width: calc(50vw - 3rem);
+  max-width: 580px;
+  min-width: 320px;
+  height: 380px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.carousel-card:hover img {
+  transform: scale(1.06);
+}
+
+.carousel-card .card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.carousel-card .card-overlay .cat-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.carousel-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.carousel-nav-btn:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* Dots */
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #818cf8;
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    width: 85vw;
+    min-width: 280px;
+    height: 340px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .carousel-card {
+    width: calc(50vw - 2.5rem);
+  }
+}
+
 /* ===== Newsletter ===== */
 .newsletter-gradient {
   background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
